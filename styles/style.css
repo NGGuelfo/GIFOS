@@ -553,6 +553,16 @@ main .buscador .trending h4 {
 }
 
 @media screen and (min-width: 1440px) {
+  .trendingGifos .gifos .contenedor {
+    width: 357px;
+  }
+  .trendingGifos .gifos .contenedor .overlay {
+    width: 357px;
+    height: 238px;
+  }
+  .trendingGifos .gifos .contenedor .overlay h4 {
+    padding-top: 109px;
+  }
   .trendingGifos .gifos .contenedor:hover .overlay {
     display: block;
   }
