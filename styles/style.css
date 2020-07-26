@@ -585,13 +585,13 @@ footer p {
 }
 
 footer .compartir {
-  padding-top: 47px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 footer .compartir p {
+  padding-top: 47px;
   font-family: 'Roboto', sans-serif;
   color: #000000;
   font-size: 16px;
@@ -604,7 +604,7 @@ footer .compartir p {
 
 footer .compartir .redes {
   padding-top: 24px;
-  padding-bottom: 47.8px;
+  padding-bottom: 47px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,6 +616,7 @@ footer .compartir .redes {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  margin: 0;
 }
 
 footer .compartir .redes a {
@@ -632,5 +633,49 @@ footer .compartir .redes a:first-child {
 
 footer .compartir .redes a:hover i {
   color: #572EE5;
+}
+
+footer .copyright {
+  padding-top: 47px;
+  margin: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .compartir {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 156px;
+  }
+  footer .compartir p {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    text-align: center;
+  }
+  footer .compartir .redes {
+    padding-top: 47px;
+    width: 100px;
+  }
+  footer .copyright {
+    padding-right: 156px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
