@@ -1,0 +1,48 @@
+@import "./variables";
+
+footer{
+    border-bottom: 5px solid $azul-textos;
+    p{
+        @include texto-negro;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 20px;
+        padding-bottom: 28px;
+    }
+    .compartir{
+        padding-top: 47px;
+        align-items: center;
+
+        p{
+
+        @include texto-negro;
+        font-size: 15px;
+        letter-spacing: 0;
+        padding-bottom: 0;
+        }
+
+        .redes{
+            padding-top: 24px;
+            padding-bottom: 47.8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            a{
+                padding-left: 19px;
+
+                i{
+                    color: $color-redes;
+                }
+            }
+            a:first-child{
+                padding-left: 0;
+            }
+            a:hover{
+                i{
+                    color: $azul-textos;
+                }
+            }
+        }
+    }
+}

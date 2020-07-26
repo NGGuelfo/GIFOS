@@ -1,0 +1,214 @@
+@import "./variables";
+
+body{
+
+border-top: 5px solid $azul-textos;
+
+header{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 18px 19px 0px 16px;
+    justify-content: space-between;
+
+    .logo{
+        #logoMob{
+            display: block;
+            width: 54px;
+            height: 49px;
+        }
+        #logoDesk{
+            display: none;
+        }
+    }
+    
+    
+    .menu{
+
+        padding-top: 3px;
+    
+        ul{
+            padding-bottom: 0px;
+            margin-top: 34px;
+            width: 100%;
+            position: absolute;
+            top: 44px;
+            right: 0;
+            overflow: hidden;
+            list-style: none;
+            background: $fondo-menu;
+            height: 0px;
+            transition: height 0.5s ease;
+
+            
+            li{
+                padding-left: 16px;
+                position: relative;
+
+                #btnCrearGifo{
+                    display: none;
+
+                }
+                a{
+                    @include menu-lista;
+                    position: relative;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                
+                a::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: calc(50% - 20.5px);
+                    width: 41px;
+                    border-bottom: 1px solid $blanco;
+                    opacity: 0.5;
+                }
+                a:hover{
+                    text-decoration: underline;
+                    text-decoration-color: $subrayado;
+                }
+                
+            }
+            li:first-child{
+                padding-top: 16px;
+            }
+        }
+
+        input{
+
+            display: block;
+            width: 40px;
+            height: 32px;
+            opacity: 0;
+            z-index: 2;
+            position: absolute;
+
+        }
+
+        input[type="checkbox"]:checked ~ ul{
+
+            height: 90%;
+            transition: height 0.5s ease-in-out;
+        }
+
+        input[type="checkbox"]:checked ~ span{
+
+            opacity: 1;
+            transform: rotate(45deg) translate(2px,1px);
+        }
+
+        input:checked ~ span:nth-last-child(3) {
+
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        input:checked ~ span:nth-last-child(2) {
+
+            transform: rotate(-45deg) translate(-1px);
+        }
+        span{
+            display: block;
+            width: 18px;
+            height: 2px;
+            margin-bottom: 3px;
+            position: relative;
+            background: $negro;
+            z-index: 1;
+            transform-origin: 3px 0px;
+            transition: transform 0.5s ease, opacity 0.55s ease;
+        }
+    }
+}
+}
+@media screen and (min-width: 1440px){
+
+body{
+    header{
+        margin-left: 156px;
+        margin-right: 100px;
+
+        .logo{
+
+            #logoDesk{
+                display: block;
+                width: 60px;
+                height: 60px;
+            }
+                #logoMob{
+                display: none;
+                }
+        }
+        
+        nav{
+
+            .menu{
+
+                input{
+                    display: none;
+                }
+                span{
+                    display: none;
+                }
+                ul{
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    overflow: hidden;
+                    background: unset;
+                    height: unset;
+
+                    li:last-child{
+                        padding-left: 58px;
+                    }
+                    li{
+                        padding-top: 0;
+                        padding-left: 41.5px;
+                        display: inline-block;
+                        
+
+                        #btnCrearGifo{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 54px;
+                            width: 54px;
+                            border: 1px solid $azul-textos;
+                            border-radius: 50%;
+
+                            
+                            #masHover{
+                                display: none;
+                            }
+                        }
+                        #btnCrearGifo:hover{
+                            background-color: $azul-textos;
+                            
+                            #masHover{
+                                display: flex;
+                                width: 16px;
+                            }
+                            #masNoHover{
+                                display: none;
+                            }
+                        }
+                        a{
+                            color: $azul-textos;
+                            padding: unset;
+                            line-height: unset;
+
+                        }
+                        a:hover{
+                            text-decoration: underline;
+                            text-decoration-color: $subrayado;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}}

@@ -1,0 +1,47 @@
+@import "./variables";
+
+.resultadosBusqueda{
+    display: none;
+    h2{
+    @include menu-lista;
+    color: $azul-textos;
+    font-size: 25px;
+    line-height: 40px;
+    padding-left: 54px;
+    padding-right: 54px;
+    padding-bottom: 38px;
+    }
+    .resultados{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        img{
+            width: 156px;
+            padding-bottom: 25px;
+            padding-left: 21px;
+        }
+    }
+    .vermas{
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 1px solid $azul-textos;
+        border-radius: 25px;
+        width: 127px;
+        height: 50px;
+        margin-top: 53px;
+        margin-left: 185px;
+        margin-right: 185px;
+        margin-bottom: 79px;
+
+        button{
+            background-color: $blanco;
+            border: none;
+            @include menu-lista;
+            font-size: 13px;
+            color: $azul-textos;
+            letter-spacing: 0;
+        }
+    }
+}

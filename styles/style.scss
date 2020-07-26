@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+    margin: auto 0;
+    padding: 0;
+}
+
+@import "./header";
+@import "./busqueda";
+@import "./resultados";
+@import "./trending";
+@import "./footer";

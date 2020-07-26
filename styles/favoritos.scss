@@ -1,0 +1,65 @@
+@import "./variables";
+@import "./header";
+@import "./footer";
+@import "./redes";
+@import "./trending";
+
+*{
+    box-sizing: border-box;
+    margin: auto 0;
+    padding: 0;
+}
+.favoritos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .tituloFavoritos{
+        padding-top: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #logofav{
+            width: 28px;
+            height: auto;
+            padding-bottom: 7px;
+        }
+        h2{
+            @include menu-lista;
+            padding-bottom: 46px;
+            font-size: 20px;
+            color: $azul-textos;
+            line-height: 30px;
+        }
+        
+    }
+    .gifFav{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 78px;
+    img{
+        padding-left: 21px;
+        width: 156px;
+        height: 120px;
+    }
+    }
+    .vermas{
+        padding-bottom: 78px;
+        .boton{
+            color: $azul-textos;
+            background-color: $blanco;
+            border: none;
+            border: 1px solid $azul-textos;
+            border-radius: 25px;
+            width: 127px;
+            height: 50px;
+            font-family: 'Montserrat' , sans-serif;
+            font-size: 13px;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+$blanco: #FFFFFF;
+$negro: #000000;
+$azul-textos: #572EE5;
+$color-redes: #CDD6E0;
+$fondo-menu: rgba(87,46,229,0.90);
+$subrayado: #5ED7C6;
+$trending-background: #F3F5F8;
+
+@mixin menu-lista {
+    
+    font-family: 'Montserrat' , sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: $blanco;
+    text-align: center;
+    line-height: 60px;
+}
+
+@mixin texto-negro{
+
+    font-family: 'Roboto', sans-serif;
+    color: $negro;
+    font-size: 16px;
+    text-align: center;
+    line-height: 23px;
+}
