@@ -428,6 +428,7 @@ main .buscador .trending h4 {
 
 .trendingGifos {
   background-color: #f3f5f8;
+  overflow: hidden;
 }
 
 .trendingGifos h2 {
@@ -457,6 +458,7 @@ main .buscador .trending h4 {
 }
 
 .trendingGifos .gifos {
+  width: 200%;
   padding-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -465,21 +467,15 @@ main .buscador .trending h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding-bottom: 82px;
 }
 
 .trendingGifos .gifos .contenedor {
   width: 243px;
-}
-
-.trendingGifos .gifos .contenedor img {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  z-index: 0;
+  height: 187px;
+  margin-left: 22px;
 }
 
 .trendingGifos .gifos .contenedor .overlay {
@@ -550,6 +546,13 @@ main .buscador .trending h4 {
   color: #ffffff;
   font-size: 16px;
   padding-left: 13px;
+}
+
+.trendingGifos .gifos .contenedor img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-width: 1440px) {
