@@ -1,11 +1,12 @@
 let trend = document.getElementById("trend");
-window.onload(trendActuales);
+let apikey = "aABJW22BM12Yf086ZASgx2ZDaOkwCw0e"
+document.addEventListener("DOMContentLoaded", trendActuales);
 
 function trendActuales(){
 
-    let url = `https://api.giphy.com/v1/trending/searches?0TjYzyUG56Ijc0o2URNRjDjomYqhh7KT`;
+   
 
-fetch(url)
+fetch(`https://api.giphy.com/v1/trending/searches?api_key=${apikey}&`)
 .then(response => response.json() )
 .then(content => {
 
@@ -13,7 +14,7 @@ fetch(url)
     
     <h3>Trending:</h3>
 
-    <h4>${content.data}</h4>
+    <h4>${content.data[0]}, ${content.data[1]}, ${content.data[2]}, ${content.data[3]}, ${content.data[4]}</h4>
     
     `;
 })
