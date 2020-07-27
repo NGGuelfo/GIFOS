@@ -6,7 +6,7 @@ function trendActuales(){
 
    
 
-fetch(`https://api.giphy.com/v1/trending/searches?api_key=${apikey}&`)
+fetch(`https://api.giphy.com/v1/trending/searches?api_key=${apikey}`)
 .then(response => response.json() )
 .then(content => {
 

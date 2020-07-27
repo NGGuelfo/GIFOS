@@ -1,27 +1,27 @@
 @import "./variables";
 
-.resultadosBusqueda{
+.resultadosBusqueda {
     display: none;
-    h2{
-    @include menu-lista;
-    color: $azul-textos;
-    font-size: 25px;
-    line-height: 40px;
-    padding-left: 54px;
-    padding-right: 54px;
-    padding-bottom: 38px;
+    h2 {
+        @include menu-lista;
+        color: $azul-textos;
+        font-size: 25px;
+        line-height: 40px;
+        padding-left: 54px;
+        padding-right: 54px;
+        padding-bottom: 38px;
     }
-    .resultados{
+    .resultados {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        img{
+        img {
             width: 156px;
             padding-bottom: 25px;
             padding-left: 21px;
         }
     }
-    .vermas{
+    .vermas {
         align-self: center;
         display: flex;
         flex-direction: row;
@@ -35,7 +35,7 @@
         margin-right: 185px;
         margin-bottom: 79px;
 
-        button{
+        button {
             background-color: $blanco;
             border: none;
             @include menu-lista;

@@ -1,12 +1,11 @@
 @import "./variables";
 
-main .buscador{
-
+main .buscador {
     display: flex;
     flex-direction: column;
     align-content: center;
 
-    h2{
+    h2 {
         @include menu-lista;
         color: $azul-textos;
         font-size: 25px;
@@ -15,17 +14,17 @@ main .buscador{
         padding-right: 54px;
         padding-bottom: 31px;
 
-        span{
+        span {
             color: $subrayado;
         }
     }
 
-    #muchachos{
+    #muchachos {
         width: 273px;
         align-self: center;
     }
 
-    .busqueda{
+    .busqueda {
         align-self: center;
         border: 1px solid $azul-textos;
         border-radius: 27px;
@@ -37,33 +36,33 @@ main .buscador{
         padding-left: 20px;
         padding-right: 20px;
 
-        .contenedor{
+        .contenedor {
             display: flex;
-            
-            img{
+
+            img {
                 width: 20px;
                 display: none;
             }
-            input{
+            input {
                 border: none;
                 padding-left: 10px;
             }
         }
-        button{
+        button {
             background-color: $blanco;
             border: none;
         }
     }
 
-    .trending{
-        h3{
+    .trending {
+        h3 {
             @include menu-lista;
             font-size: 16px;
             color: $azul-textos;
             line-height: 25px;
             padding-top: 31px;
         }
-        h4{
+        h4 {
             @include menu-lista;
             color: $azul-textos;
             font-weight: 500;
@@ -72,38 +71,31 @@ main .buscador{
             line-height: 25px;
             padding-bottom: 35px;
         }
-        
     }
-    
 }
 
-@media screen and (min-width: 1440px){
-
-    main .buscador{
-        
+@media screen and (min-width: 1440px) {
+    main .buscador {
         padding-top: 76px;
 
-        h2{
+        h2 {
             font-size: 35px;
             line-height: 50px;
             padding-bottom: 24px;
             padding-left: 420px;
             padding-right: 420px;
         }
-        #muchachos{
+        #muchachos {
             width: 399px;
             align-self: center;
         }
-        .busqueda{
-
+        .busqueda {
             width: 551px;
         }
-        .trending{
-            
-            h3{
-            padding-top: 4.8%;
+        .trending {
+            h3 {
+                padding-top: 4.8%;
             }
         }
     }
-   
 }

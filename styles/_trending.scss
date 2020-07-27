@@ -1,10 +1,9 @@
 @import "./variables";
 
-.trendingGifos{
-
+.trendingGifos {
     background-color: $trending-background;
 
-    h2{
+    h2 {
         @include menu-lista;
         color: $azul-textos;
         font-size: 25px;
@@ -14,98 +13,98 @@
         padding-bottom: 7px;
         padding-top: 46px;
     }
-    p{
+    p {
         @include texto-negro;
         padding-left: 110px;
         padding-right: 110px;
     }
 
-    .gifos{
+    .gifos {
         padding-top: 32px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
         padding-bottom: 82px;
-        .contenedor{
+
+        .contenedor {
             width: 243px;
-        img{
-        position: relative;
-        width: 100%;
-        margin: 0;
-        z-index: 0;
-        }
-        .overlay{
-            z-index: 1;
-            display: none;
-            position: absolute;
-            width: 243px;
-            height: 162px;
-            align-items: center;
-            background-color: rgba(87,46,229,0.6);
-        .iconos{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            button{
-                width: 32px;
-                height: 32px;
-                margin-left: 10px;
-                border: 0;
-                border-radius: 6px;
-                margin-top: 10px;
-                background-color: $blanco;
-                color: $azul-textos;
-                opacity: 0.5;
-                i{
+            img {
+                position: relative;
+                width: 100%;
+                margin: 0;
+                z-index: 0;
+            }
+            .overlay {
+                z-index: 1;
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 162px;
+                align-items: center;
+                background-color: rgba(87, 46, 229, 0.6);
+                .iconos {
                     width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    button {
+                        width: 32px;
+                        height: 32px;
+                        margin-left: 10px;
+                        border: 0;
+                        border-radius: 6px;
+                        margin-top: 10px;
+                        background-color: $blanco;
+                        color: $azul-textos;
+                        opacity: 0.5;
+                        i {
+                            width: 100%;
+                        }
+                    }
+                    button:last-child {
+                        margin-right: 10px;
+                    }
+                    button:first-child:hover {
+                        fill: $azul-textos;
+                    }
+                    button:hover {
+                        opacity: 1;
+                    }
+                }
+                h4 {
+                    padding-top: 70px;
+                    padding-left: 13px;
+                    font-family: "Roboto", sans-serif;
+                    color: $blanco;
+                    font-size: 15px;
+                    font-weight: lighter;
+                }
+                h3 {
+                    font-family: "Roboto", sans-serif;
+                    color: $blanco;
+                    font-size: 16px;
+                    padding-left: 13px;
                 }
             }
-            button:last-child{
-                margin-right: 10px;
-            }
-            button:first-child:hover{
-                fill: $azul-textos;
-            }
-            button:hover{
-                opacity: 1;
-            }
-        }
-        h4{
-            padding-top: 70px;
-            padding-left: 13px;
-            font-family: 'Roboto', sans-serif;
-            color: $blanco;
-            font-size: 15px;
-            font-weight: lighter;
-        }
-        h3{
-            font-family: 'Roboto', sans-serif;
-            color: $blanco;
-            font-size: 16px;
-            padding-left: 13px;
         }
     }
-}}
-    
 }
 
-@media screen and (min-width: 1440px){
-
-    .trendingGifos{
-        .gifos .contenedor{
+@media screen and (min-width: 1440px) {
+    .trendingGifos {
+        .gifos .contenedor {
             width: 357px;
-            .overlay{
+            .overlay {
                 width: 357px;
                 height: 238px;
 
-                h4{
+                h4 {
                     padding-top: 109px;
                 }
             }
         }
-    .gifos .contenedor:hover .overlay{
-        display: block;
+        .gifos .contenedor:hover .overlay {
+            display: block;
+        }
     }
-}
 }
