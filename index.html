@@ -47,10 +47,12 @@
 
                 <div class="contenedor">
                     <img src="media/icon-search-gris.svg" alt="icon-search-gris">
-                    <input type="text" placeholder="Busca GIFOS y más">
+                    <input id="textoBuscado" type="text" placeholder="Busca GIFOS y más">
                 </div>
-                <button type="button"><img src="media/icon-search.svg" alt="icon-search"></i></button>
+                <button id="btnBuscar" type="button"><img src="media/icon-search.svg" alt="icon-search"></i></button>
+                <ul id="gifos-sugerencias">
 
+                </ul>
             </div>
 
             <div id="trend" class="trending">
@@ -65,16 +67,16 @@
 
         <section class="resultadosBusqueda">
 
-            <h2>Mascotas</h2>
+            <h2 id="tituloResultado">Mascotas</h2>
 
-            <div class="resultados">
+            <div id="resultadoBusqueda" class="resultados">
 
                 <img src="media/eyedesyn12.gif" alt="gif-buscado">
 
             </div>
 
             <div class="vermas">
-                <button>VER MÁS</button>
+                <button class="boton">VER MÁS</button>
             </div>
 
         </section>
@@ -112,6 +114,7 @@
     </footer>
     <script src="scripts/trends.js"></script>
     <script src="scripts/trendingGifos.js"></script>
+    <script src="scripts/busqueda.js"></script>
 </body>
 
 </html>

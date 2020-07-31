@@ -354,7 +354,19 @@ main .buscador .trending h4 {
 }
 
 .resultadosBusqueda {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .resultadosBusqueda h2 {
@@ -390,40 +402,23 @@ main .buscador .trending h4 {
 }
 
 .resultadosBusqueda .vermas {
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-bottom: 78px;
+  padding-top: 78px;
+}
+
+.resultadosBusqueda .vermas .boton {
+  color: #572ee5;
+  background-color: #ffffff;
+  border: none;
   border: 1px solid #572ee5;
   border-radius: 25px;
   width: 127px;
   height: 50px;
-  margin-top: 53px;
-  margin-left: 185px;
-  margin-right: 185px;
-  margin-bottom: 79px;
-}
-
-.resultadosBusqueda .vermas button {
-  background-color: #ffffff;
-  border: none;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 60px;
   font-size: 13px;
-  color: #572ee5;
   letter-spacing: 0;
+  text-align: center;
+  font-weight: 700;
 }
 
 .trendingGifos {
