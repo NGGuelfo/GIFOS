@@ -41,3 +41,12 @@ $detalle-bordes: #50E3C2;
     text-align: center;
     line-height: 29px;
 }
+
+@mixin subiendo-gif{
+    
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: $blanco;
+    text-align: center;
+}

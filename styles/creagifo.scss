@@ -27,40 +27,11 @@
             height: 353px;
             margin-top: 18px;
             margin-left: 20px;
+            display: flex;
+            flex-direction: column;
         }
-        .detalle-ventana:before,
-        .detalle-ventana:after,
-        .detalle-ventana > :first-child:before,
-        .detalle-ventana > :first-child:after {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-color: $detalle-bordes;
-            border-style: solid;
-            content: " ";
-        }
-        .detalle-ventana:before {
-            top: 0;
-            left: 0;
-            border-width: 1px 0 0 1px;
-        }
-        .detalle-ventana:after {
-            top: 0;
-            right: 0;
-            border-width: 1px 1px 0 0;
-        }
-        .detalle-ventana > :first-child:before {
-            bottom: 0;
-            right: 0;
-            border-width: 0 1px 1px 0;
-        }
-        .detalle-ventana > :first-child:after {
-            bottom: 0;
-            left: 0;
-            border-width: 0 0 1px 1px;
-        }
-
         .detalle-ventana .pantalla-uno {
+            display: none;
             padding-top: 104px;
 
             h2 {
@@ -84,9 +55,80 @@
                 @include subtexto-grabador;
             }
         }
-        .detalle-ventana .grabacion .overlay-video-contenedor{
-            display: none;
+        .detalle-ventana .grabacion {
+            position: relative;
+            width: 480px;
+            height: 320px;
+            border: 1px solid red;
+            align-self: center;
         }
+
+        .detalle-ventana .overlay-video-contenedor{
+            margin-top: 16.5px;
+            //padding-top: 140px;
+            width: 480px;
+            height: 320px;
+            position: absolute;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(87, 46, 229, 0.6);
+
+            #botones-post{
+                    width: 100%;
+                    padding-right: 12px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    position: absolute;
+                    margin: 0;
+                button {
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 10px;
+                    border: 0;
+                    border-radius: 6px;
+                    margin-top: 10px;
+                    background-color: $blanco;
+                    color: $azul-textos;
+                    opacity: 0.5;
+                    i {
+                        width: 100%;
+                    }
+                }
+                button:hover{
+                    opacity: 1;
+                }
+            }
+            
+            .primer-capa{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                display: none;
+                padding-top: 140px;
+                p{
+                    padding-top: 10px;
+                    @include subiendo-gif;
+                }
+            }
+            .segunda-capa{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                //display: none;
+                margin: 0;
+                padding-top: 140px;
+                p{
+                    padding-top: 10px;
+                    @include subiendo-gif;
+                }
+                
+            }
+        }
+
     }
 }
 .pasos-video{
@@ -134,6 +176,11 @@
 
 }
 .botonera{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     .boton{
             color: $azul-textos;
             background-color: $blanco;
@@ -151,6 +198,15 @@
     .boton:hover{
             background-color: $azul-textos;
             color: $blanco;
+    }
+    #btn-grabar{
+        display: none;
+    }
+    #btn-finalizar{
+        display: none;
+    }
+    #btn-subgifo{
+        display: none;
     }
 }
 }

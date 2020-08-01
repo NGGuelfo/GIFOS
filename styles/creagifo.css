@@ -31,39 +31,16 @@
     height: 353px;
     margin-top: 18px;
     margin-left: 20px;
-  }
-  .camara-video .ventana .detalle-ventana:before,
-  .camara-video .ventana .detalle-ventana:after,
-  .camara-video .ventana .detalle-ventana > :first-child:before,
-  .camara-video .ventana .detalle-ventana > :first-child:after {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-color: #50E3C2;
-    border-style: solid;
-    content: " ";
-  }
-  .camara-video .ventana .detalle-ventana:before {
-    top: 0;
-    left: 0;
-    border-width: 1px 0 0 1px;
-  }
-  .camara-video .ventana .detalle-ventana:after {
-    top: 0;
-    right: 0;
-    border-width: 1px 1px 0 0;
-  }
-  .camara-video .ventana .detalle-ventana > :first-child:before {
-    bottom: 0;
-    right: 0;
-    border-width: 0 1px 1px 0;
-  }
-  .camara-video .ventana .detalle-ventana > :first-child:after {
-    bottom: 0;
-    left: 0;
-    border-width: 0 0 1px 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .camara-video .ventana .detalle-ventana .pantalla-uno {
+    display: none;
     padding-top: 104px;
   }
   .camara-video .ventana .detalle-ventana .pantalla-uno h2 {
@@ -103,8 +80,107 @@
     text-align: center;
     line-height: 29px;
   }
-  .camara-video .ventana .detalle-ventana .grabacion .overlay-video-contenedor {
+  .camara-video .ventana .detalle-ventana .grabacion {
+    position: relative;
+    width: 480px;
+    height: 320px;
+    border: 1px solid red;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor {
+    margin-top: 16.5px;
+    width: 480px;
+    height: 320px;
+    position: absolute;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(87, 46, 229, 0.6);
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post {
+    width: 100%;
+    padding-right: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: absolute;
+    margin: 0;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #572ee5;
+    opacity: 0.5;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button i {
+    width: 100%;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button:hover {
+    opacity: 1;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor .primer-capa {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
     display: none;
+    padding-top: 140px;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor .primer-capa p {
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor .segunda-capa {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding-top: 140px;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor .segunda-capa p {
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
   }
   .pasos-video {
     display: -webkit-box;
@@ -155,6 +231,19 @@
     background-color: #572ee5;
     border-radius: 5px;
   }
+  .botonera {
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .botonera .boton {
     color: #572ee5;
     background-color: #ffffff;
@@ -172,6 +261,15 @@
   .botonera .boton:hover {
     background-color: #572ee5;
     color: #ffffff;
+  }
+  .botonera #btn-grabar {
+    display: none;
+  }
+  .botonera #btn-finalizar {
+    display: none;
+  }
+  .botonera #btn-subgifo {
+    display: none;
   }
 }
 /*# sourceMappingURL=creagifo.css.map */
