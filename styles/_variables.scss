@@ -5,6 +5,7 @@ $color-redes: #cdd6e0;
 $fondo-menu: rgba(87, 46, 229, 0.9);
 $subrayado: #5ed7c6;
 $trending-background: #f3f5f8;
+$detalle-bordes: #50E3C2;
 
 @mixin menu-lista {
     font-family: "Montserrat", sans-serif;
@@ -21,4 +22,22 @@ $trending-background: #f3f5f8;
     font-size: 16px;
     text-align: center;
     line-height: 23px;
+}
+
+@mixin texto-grabador{
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: $azul-textos;
+    text-align: center;
+    line-height: 35px;
+}
+
+@mixin subtexto-grabador {
+    font-family: "Roboto", sans-serif;
+    color: $negro;
+    font-size: 16px;
+    text-align: center;
+    line-height: 29px;
 }

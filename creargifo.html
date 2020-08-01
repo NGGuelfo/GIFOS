@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/creagifo.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/9f61133a44.js" crossorigin="anonymous"></script>
@@ -38,18 +39,23 @@
     </header>
     <main>
         <section class="camara-video">
-        <div class="reproductor">
-            <img src="media/camara.svg" alt="camara">
-            <img src="media/element-luz-camara.svg" alt="luz camara">
+            <div class="reproductor">
+                <img src="media/camara.svg" alt="camara">
+                <img id="luz" src="media/element-luz-camara.svg" alt="luz camara">
+            </div>
             <div class="ventana">
                 <div class="detalle-ventana">
                     <div class="pantalla-uno">
-                        <h2>Aquí podrás crear tus propios <span>GIFOS</span></h2>
-                        <p>¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una camara para grabar un video)</p>
+                        <h2>Aquí podrás</h2> 
+                        <h2>crear tus propios <span>GIFOS</span></h2>
+                        <p>¡Crea tu GIFO en sólo 3 pasos!</p> 
+                        <p>(sólo necesitas una camara para grabar un video)</p>
                     </div>
                     <div class="pantalla-dos">
-                        <h2>¿Nos das acceso a tu cámara?</h2>
-                        <p>El acceso a tu camara seá válido sólo por el tiempo en el que estes creando el GIFO.</p>
+                        <h2>¿Nos das acceso</h2> 
+                        <h2>a tu cámara?</h2>
+                        <p>El acceso a tu camara seá válido sólo</p> 
+                        <p>por el tiempo en el que estes creando el GIFO.</p>
                     </div>
                     <div class="grabacion">
                         <video src="#"></video>
@@ -68,24 +74,27 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="pasos-video">
-        <div class="cont-pasos">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p id="contador">00:00:05</p>
-            <a href="#">Repetir Captura</a>
-        </div>
-        <img src="media/pelicula.svg" alt="pelicula">
-    </section>
-    <section class="botonera">
-        <button id="btn-comenzar">COMENZAR</button>
-        <button id="btn-grabar">GRABAR</button>
-        <button id="btn-finalizar">FINALIZAR</button>
-        <button id="btn-subgifo">SUBIR GIFO</button>
-    </section>
+
+        </section>
+        <section class="pasos-video">
+            <div class="cont-pasos">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </div>
+            <div id="rep-captura">
+                <p id="contador">00:00:05</p>
+                <a href="#">Repetir Captura</a>
+            </div>
+            <img src="media/pelicula.svg" alt="pelicula">
+        </section>
+        <div id="separador"></div>
+        <section class="botonera">
+            <button class="boton" id="btn-comenzar">COMENZAR</button>
+            <button class="boton" id="btn-grabar">GRABAR</button>
+            <button class="boton" id="btn-finalizar">FINALIZAR</button>
+            <button class="boton" id="btn-subgifo">SUBIR GIFO</button>
+        </section>
     </main>
     <footer>
         <div class="compartir">

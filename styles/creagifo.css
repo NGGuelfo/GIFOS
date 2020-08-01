@@ -1,0 +1,177 @@
+@media screen and (min-width: 1440px) {
+  .camara-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 15px;
+    padding-left: 156px;
+  }
+  .camara-video .reproductor #luz {
+    width: 98px;
+    height: 160px;
+  }
+  .camara-video .ventana {
+    border: 1px solid #572ee5;
+    width: 688px;
+    height: 390px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .camara-video .ventana .detalle-ventana {
+    position: relative;
+    width: 646px;
+    height: 353px;
+    margin-top: 18px;
+    margin-left: 20px;
+  }
+  .camara-video .ventana .detalle-ventana:before,
+  .camara-video .ventana .detalle-ventana:after,
+  .camara-video .ventana .detalle-ventana > :first-child:before,
+  .camara-video .ventana .detalle-ventana > :first-child:after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: #50E3C2;
+    border-style: solid;
+    content: " ";
+  }
+  .camara-video .ventana .detalle-ventana:before {
+    top: 0;
+    left: 0;
+    border-width: 1px 0 0 1px;
+  }
+  .camara-video .ventana .detalle-ventana:after {
+    top: 0;
+    right: 0;
+    border-width: 1px 1px 0 0;
+  }
+  .camara-video .ventana .detalle-ventana > :first-child:before {
+    bottom: 0;
+    right: 0;
+    border-width: 0 1px 1px 0;
+  }
+  .camara-video .ventana .detalle-ventana > :first-child:after {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 1px 1px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-uno {
+    padding-top: 104px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-uno h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #572ee5;
+    text-align: center;
+    line-height: 35px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-uno h2 span {
+    color: #50E3C2;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-uno p {
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 29px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-dos {
+    display: none;
+    padding-top: 104px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-dos h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #572ee5;
+    text-align: center;
+    line-height: 35px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-dos p {
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 29px;
+  }
+  .camara-video .ventana .detalle-ventana .grabacion .overlay-video-contenedor {
+    display: none;
+  }
+  .pasos-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 485px;
+  }
+  .pasos-video .cont-pasos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .pasos-video .cont-pasos p {
+    width: 32px;
+    height: 32px;
+    margin-left: 25px;
+    border: 1px solid #572ee5;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 18px;
+    color: #572ee5;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .pasos-video .cont-pasos p:first-child {
+    margin-left: 0;
+  }
+  .pasos-video #rep-captura {
+    position: absolute;
+    margin-left: 100px;
+    padding-top: 35px;
+  }
+  .pasos-video img {
+    padding-left: 336px;
+  }
+  #separador {
+    height: 6.9px;
+    width: 795.9px;
+    margin-left: 325px;
+    background-color: #572ee5;
+    border-radius: 5px;
+  }
+  .botonera .boton {
+    color: #572ee5;
+    background-color: #ffffff;
+    border: none;
+    border: 1px solid #572ee5;
+    border-radius: 25px;
+    width: 127px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 700;
+  }
+  .botonera .boton:hover {
+    background-color: #572ee5;
+    color: #ffffff;
+  }
+}
+/*# sourceMappingURL=creagifo.css.map */
