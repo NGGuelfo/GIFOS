@@ -40,7 +40,6 @@
             flex-direction: column;
   }
   .camara-video .ventana .detalle-ventana .pantalla-uno {
-    display: none;
     padding-top: 104px;
   }
   .camara-video .ventana .detalle-ventana .pantalla-uno h2 {
@@ -84,7 +83,6 @@
     position: relative;
     width: 480px;
     height: 320px;
-    border: 1px solid red;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -107,6 +105,7 @@
         -ms-flex-align: center;
             align-items: center;
     background-color: rgba(87, 46, 229, 0.6);
+    display: none;
   }
   .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post {
     width: 100%;
@@ -123,6 +122,7 @@
             justify-content: flex-end;
     position: absolute;
     margin: 0;
+    display: none;
   }
   .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button {
     width: 32px;
@@ -171,6 +171,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    display: none;
     margin: 0;
     padding-top: 140px;
   }

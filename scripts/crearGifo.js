@@ -12,10 +12,17 @@ let overlay = document.getElementById("overlay-video");
 let dayStarted;
 let contador = document.getElementById("contador");
 let repCaptura = document.getElementById("nueva-captura");
+let form = new FormData();
+let cargando = document.getElementById("cargandoGif");
+let gifSubido = document.getElementById("gifCargado");
+let btnDescargar = document.getElementById("botones-post");
+let apikey = 'aABJW22BM12Yf086ZASgx2ZDaOkwCw0e';
 
 comenzar.addEventListener("click", Inicializar);
 grabar.addEventListener("click",grabacion);
 finalizar.addEventListener("click",detener);
+subir.addEventListener("click", cargarGifo);
+repCaptura.addEventListener("click",repitoCaptura);
 
 async function Inicializar(){
     pasoUno.style.backgroundColor = "#572ee5";
@@ -79,6 +86,10 @@ async function detener(){
         let blob = recorder.getBlob();
         invokeSaveAsDialog(blob);
     });
+    form.append('file',recorder.getBlob(), 'myGif.gif');
+    //localStorage.setItem('item', form);
+    console.log(form.get('file'));
+    //console.log(localStorage.getItem('item'));
     finalizar.style.display = "none";
     repCaptura.style.display = "block";
     contador.style.display = "none";
@@ -98,4 +109,32 @@ function calculateTimeDuration(secs) {
     }
 
     return hr + ':' + min + ':' + sec;
+}
+
+function repitoCaptura(){
+
+form.delete('file');
+subir.style.display = "none";
+repCaptura.style.display = "none";
+grabacion();
+video.play();
+}
+
+async function cargarGifo(){
+
+    overlay.style.display = "block";
+    cargando.style.display = "flex";
+
+    fetch(`https://www.upload.giphy.com/v1/gifs?api_key=${apikey}&file=${form}`)
+    .then(data => {
+        data.json();
+    })
+    .then(id => {
+        cargando.style.display = "none";
+        gifCargado.style.display = 'flex';
+        btnDescargar.style.display = "block";
+        console.log(id.response_id);
+        localstorage.setItem('misGifos', id.response_id);
+    })
+    .catch(err => console.log(err));
 }

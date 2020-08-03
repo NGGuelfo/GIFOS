@@ -31,7 +31,6 @@
             flex-direction: column;
         }
         .detalle-ventana .pantalla-uno {
-            display: none;
             padding-top: 104px;
 
             h2 {
@@ -59,13 +58,12 @@
             position: relative;
             width: 480px;
             height: 320px;
-            border: 1px solid red;
+            //border: 1px solid red;
             align-self: center;
         }
 
         .detalle-ventana .overlay-video-contenedor{
             margin-top: 16.5px;
-            //padding-top: 140px;
             width: 480px;
             height: 320px;
             position: absolute;
@@ -74,6 +72,7 @@
             flex-direction: column;
             align-items: center;
             background-color: rgba(87, 46, 229, 0.6);
+            display: none;
 
             #botones-post{
                     width: 100%;
@@ -83,6 +82,7 @@
                     justify-content: flex-end;
                     position: absolute;
                     margin: 0;
+                    display: none;
                 button {
                     width: 32px;
                     height: 32px;
@@ -118,7 +118,7 @@
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                //display: none;
+                display: none;
                 margin: 0;
                 padding-top: 140px;
                 p{
