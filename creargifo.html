@@ -45,13 +45,13 @@
             </div>
             <div class="ventana">
                 <div class="detalle-ventana">
-                    <div class="pantalla-uno">
+                    <div id="primer-mensaje" class="pantalla-uno">
                         <h2>Aquí podrás</h2> 
                         <h2>crear tus propios <span>GIFOS</span></h2>
                         <p>¡Crea tu GIFO en sólo 3 pasos!</p> 
                         <p>(sólo necesitas una camara para grabar un video)</p>
                     </div>
-                    <div class="pantalla-dos">
+                    <div id="segundo-mensaje" class="pantalla-dos">
                         <h2>¿Nos das acceso</h2> 
                         <h2>a tu cámara?</h2>
                         <p>El acceso a tu camara seá válido sólo</p> 
@@ -60,7 +60,7 @@
                     <div class="grabacion">
                         <video id="video" src="#"></video>
                     </div>
-                    <div class="overlay-video-contenedor">
+                    <div id="overlay-video" class="overlay-video-contenedor">
                         <div id="botones-post">
                             <button><i class="fas fa-download"></i></button>
                             <button><i class="fas fa-link"></i></button>
@@ -86,7 +86,7 @@
             </div>
             <div id="rep-captura">
                 <p id="contador">00:00:05</p>
-                <a href="#">Repetir Captura</a>
+                <a id="nueva-captura" href="#">Repetir Captura</a>
             </div>
             <img src="media/pelicula.svg" alt="pelicula">
         </section>

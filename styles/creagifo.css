@@ -221,6 +221,12 @@
     margin-left: 100px;
     padding-top: 35px;
   }
+  .pasos-video #nueva-captura {
+    display: none;
+  }
+  .pasos-video #contador {
+    display: none;
+  }
   .pasos-video img {
     padding-left: 336px;
   }
