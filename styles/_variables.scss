@@ -50,3 +50,24 @@ $detalle-bordes: #50E3C2;
     color: $blanco;
     text-align: center;
 }
+
+@mixin estilo-contador {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: $azul-textos;
+    text-align: center;
+    line-height: 22px
+
+}
+
+@mixin estilo-repCaptura{
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: $azul-textos;
+    text-align: center;
+}

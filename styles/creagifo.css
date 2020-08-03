@@ -223,9 +223,28 @@
   }
   .pasos-video #nueva-captura {
     display: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #572ee5;
+    text-align: center;
+  }
+  .pasos-video #nueva-captura:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #5ed7c6;
+            text-decoration-color: #5ed7c6;
   }
   .pasos-video #contador {
     display: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #572ee5;
+    text-align: center;
+    line-height: 22px;
   }
   .pasos-video img {
     padding-left: 336px;

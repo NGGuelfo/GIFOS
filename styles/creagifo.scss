@@ -165,9 +165,17 @@
     }
     #nueva-captura{
         display: none;
+        text-decoration: none;
+        @include estilo-repCaptura;
+    }
+    #nueva-captura:hover{
+        text-decoration: underline;
+        text-decoration-color: $subrayado;
     }
     #contador{
         display: none;
+        @include estilo-contador;
+
     }
     img{
         padding-left: 336px;

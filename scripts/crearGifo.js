@@ -67,19 +67,21 @@ async function grabacion(){
 
 async function detener(){
 
+    video.pause();
     grabar.style.display = "none";
     finalizar.style.display = "block";
     pasoTres.style.backgroundColor = "#572ee5";
     pasoTres.style.color = "#FFFFFF";
     pasoDos.style.backgroundColor = "#FFFFFF";
     pasoDos.style.color = "#572ee5";
+    subir.style.display = "block";
     recorder.stopRecording(function (){
         let blob = recorder.getBlob();
         invokeSaveAsDialog(blob);
     });
     finalizar.style.display = "none";
     repCaptura.style.display = "block";
-    nueva
+    contador.style.display = "none";
 }
 
 function calculateTimeDuration(secs) {
