@@ -300,6 +300,10 @@ main .buscador .busqueda button {
   border: none;
 }
 
+main .buscador .busqueda button #cruz {
+  display: none;
+}
+
 main .buscador .trending h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;

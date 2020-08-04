@@ -51,6 +51,10 @@ main .buscador {
         button {
             background-color: $blanco;
             border: none;
+
+            #cruz{
+                display: none;
+            }
         }
     }
 
