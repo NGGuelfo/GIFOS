@@ -1,3 +1,4 @@
+//Genero las Varibales Correspondientes
 let stream, recorder;
 let comenzar = document.getElementById("btn-comenzar");
 let grabar = document.getElementById("btn-grabar");
@@ -20,14 +21,16 @@ let apikey = 'aABJW22BM12Yf086ZASgx2ZDaOkwCw0e';
 
 let bajada = document.getElementById("descargar");
 
+//Realizo las llamadas a las funciones a partir de la accion recibida desde la pagina
 comenzar.addEventListener("click", Inicializar);
-grabar.addEventListener("click",grabacion);
-finalizar.addEventListener("click",detener);
+grabar.addEventListener("click", grabacion);
+finalizar.addEventListener("click", detener);
 subir.addEventListener("click", cargarGifo);
-repCaptura.addEventListener("click",repitoCaptura);
+repCaptura.addEventListener("click", repitoCaptura);
 bajada.addEventListener("click", descargar);
 
-async function Inicializar(){
+//funcion para activar la camara y el microfono
+async function Inicializar() {
     pasoUno.style.backgroundColor = "#572ee5";
     pasoUno.style.color = "#FFFFFF";
     comenzar.style.display = "none";
@@ -35,10 +38,10 @@ async function Inicializar(){
     mensajeDos.style.display = "block";
     overlay.style.display = "none";
 
-    let constraints =  {audio: false, video: {width: 480, height: 320}};
+    let constraints = { audio: false, video: { width: 480, height: 320 } };
     navigator.mediaDevices.getUserMedia(constraints)
-        .then(async function(stream){
-        
+        .then(async function (stream) {
+
             mensajeDos.style.display = "none";
             pasoDos.style.backgroundColor = "#572ee5";
             pasoDos.style.color = "#FFFFFF";
@@ -51,16 +54,17 @@ async function Inicializar(){
             });
             let video = document.querySelector("video");
             video.srcObject = stream;
-            video.onloadedmetadata = function(e){
+            video.onloadedmetadata = function (e) {
                 video.play();
             }
-        
+
         });
 
 }
 
-async function grabacion(){
-    
+//Funcion para grabar el GIF
+async function grabacion() {
+
     grabar.style.display = 'none';
     finalizar.style.display = 'block';
 
@@ -70,12 +74,13 @@ async function grabacion(){
     dateStarted = new Date().getTime();
     contador.style.display = 'block';
     (function looper() {
-    contador.innerText = calculateTimeDuration((new Date().getTime() - dateStarted) / 1000);
-   setTimeout(looper,1000); 
-})();
+        contador.innerText = calculateTimeDuration((new Date().getTime() - dateStarted) / 1000);
+        setTimeout(looper, 1000);
+    })();
 }
 
-async function detener(){
+//Funcion para detener la grabacion del GIF y Obtener el contenido grabado
+async function detener() {
 
     video.pause();
     grabar.style.display = "none";
@@ -85,7 +90,7 @@ async function detener(){
     pasoDos.style.backgroundColor = "#FFFFFF";
     pasoDos.style.color = "#572ee5";
     subir.style.display = "block";
-    recorder.stopRecording(function (){
+    recorder.stopRecording(function () {
         let blob = recorder.getBlob();
         form.append('file', blob, 'myGif.gif');
         form.append('api_key', apikey);
@@ -98,6 +103,7 @@ async function detener(){
     contador.style.display = "none";
 }
 
+//Funcion para que me aparezca el timer en pantalla (llamada dentro de la funcion de grabacion)
 function calculateTimeDuration(secs) {
     let hr = Math.floor(secs / 3600);
     let min = Math.floor((secs - (hr * 3600)) / 60);
@@ -114,43 +120,43 @@ function calculateTimeDuration(secs) {
     return hr + ':' + min + ':' + sec;
 }
 
-function repitoCaptura(){
+//Funcion para borrar el contenido grabado y volver a grabarlo
+function repitoCaptura() {
 
-form.delete('file');
-subir.style.display = "none";
-repCaptura.style.display = "none";
-grabacion();
-video.play();
+    form.delete('file');
+    subir.style.display = "none";
+    repCaptura.style.display = "none";
+    grabacion();
+    video.play();
 }
 
-async function cargarGifo(){
+//Funcion para subir el video grabado a la plataforma GIPHY y almacenarlo en el localstorage
+async function cargarGifo() {
 
     overlay.style.display = "flex";
     cargando.style.display = "flex";
     debugger;
-    fetch(`https://upload.giphy.com/v1/gifs`,{
-      method: "POST",
-      body: form
-      /*headers: {
-        'api_key' : apikey
-      }*/
+    fetch(`https://upload.giphy.com/v1/gifs`, {
+        method: "POST",
+        body: form
+
     })
-    .then(data => {
-        return data.json();
-    })
-    .then(obj => {
-        cargando.style.display = "none";
-        gifCargado.style.display = 'flex';
-        btnDescargar.style.display = "flex";
-        console.log(obj.data.id);
-        localstorage.setItem('misGifos', id.meta.response_id);
-        console.log(localstorage.getItem('misGifos'));
-    })
-    .catch(err => console.log(err));
-    
+        .then(data => {
+            return data.json();
+        })
+        .then(obj => {
+            cargando.style.display = "none";
+            gifCargado.style.display = 'flex';
+            btnDescargar.style.display = "flex";
+            localstorage.setItem('misGifos', obj.data.id);
+            console.log(localstorage.getItem('misGifos'));
+        })
+        .catch(err => console.log(err));
+
 }
 
-function descargar(){
+//Funcion para descargar el video grabado a la PC
+function descargar() {
 
     invokeSaveAsDialog(form.get('file'));
 }
