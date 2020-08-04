@@ -88,6 +88,7 @@ async function detener(){
     recorder.stopRecording(function (){
         let blob = recorder.getBlob();
         form.append('file', blob, 'myGif.gif');
+        form.append('api_key', apikey);
     });
 
     console.log(form.get('file'));
@@ -126,26 +127,26 @@ async function cargarGifo(){
 
     overlay.style.display = "flex";
     cargando.style.display = "flex";
-
-    fetch(`https://upload.giphy.com/v1/gifs?aABJW22BM12Yf086ZASgx2ZDaOkwCw0e`,{
-
+    debugger;
+    fetch(`https://upload.giphy.com/v1/gifs`,{
       method: "POST",
-      origin: "http://127.0.0.1:5500",
-      body: form,
-      credentials: apikey
+      body: form
+      /*headers: {
+        'api_key' : apikey
+      }*/
     })
     .then(data => {
-        data.json();
+        return data.json();
     })
-    .catch(err => console.log(err))
-    .then(id => {
+    .then(obj => {
         cargando.style.display = "none";
         gifCargado.style.display = 'flex';
         btnDescargar.style.display = "flex";
-        console.log(id);
-        //localstorage.setItem('misGifos', id.meta.response_id);
-        //console.log(localstorage.getItem('misGifos'));
-    });
+        console.log(obj.data.id);
+        localstorage.setItem('misGifos', id.meta.response_id);
+        console.log(localstorage.getItem('misGifos'));
+    })
+    .catch(err => console.log(err));
     
 }
 
