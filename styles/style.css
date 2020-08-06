@@ -354,7 +354,18 @@ main .buscador .trending h3 {
   padding-top: 31px;
 }
 
-main .buscador .trending h4 {
+main .buscador .trending ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -363,8 +374,6 @@ main .buscador .trending h4 {
   line-height: 60px;
   color: #572ee5;
   font-weight: 500;
-  padding-left: 75px;
-  padding-right: 75px;
   line-height: 25px;
   padding-bottom: 35px;
 }

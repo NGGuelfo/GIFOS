@@ -12,13 +12,14 @@ let vermas = document.getElementById("mas");
 let offset = 0;
 let trend = document.getElementById("trend");
 let apikey = "aABJW22BM12Yf086ZASgx2ZDaOkwCw0e";
+let modas = document.getElementById("modas");
 
 document.addEventListener("DOMContentLoaded", trendActuales);
 btnBuscar.addEventListener("click", buscando);
 textoBuscado.addEventListener("keyup",sugerencias);
 opciones.addEventListener("click",sugerido);
 vermas.addEventListener("click", masResultados);
-
+modas.addEventListener("click", sugerido);
 
 function buscando(){
 
@@ -77,6 +78,7 @@ function sugerido(e){
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${e.target.innerText}&limit=12&offset=0`)
     .then(data => data.json())
     .then(response => {
+        textoBuscado.value = e.target.innerText;
         seccionResult.style.display = 'flex';
         tituloResultado.innerText = e.target.innerText;
         opciones.innerHTML = ``;
@@ -104,11 +106,12 @@ function trendActuales() {
         .then(response => response.json())
         .then(content => {
 
-            trend.innerHTML = `
-    
-    <h3>Trending:</h3>
-
-    <h4>${content.data[0]}, ${content.data[1]}, ${content.data[2]}, ${content.data[3]}, ${content.data[4]}</h4>
+            modas.innerHTML = `
+    <li class="trend"><a>${content.data[0]}</a>,</li>
+    <li class="trend"><a>${content.data[1]}</a>,</li>
+    <li class="trend"><a>${content.data[2]}</a>,</li>
+    <li class="trend"><a>${content.data[3]}</a>,</li>
+    <li class="trend"><a>${content.data[4]}</a></li></ul>
     
     `;
         })

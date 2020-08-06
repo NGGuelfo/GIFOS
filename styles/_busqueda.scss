@@ -84,12 +84,14 @@ main .buscador {
       line-height: 25px;
       padding-top: 31px;
     }
-    h4 {
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: center;
       @include menu-lista;
       color: $azul-textos;
       font-weight: 500;
-      padding-left: 75px;
-      padding-right: 75px;
       line-height: 25px;
       padding-bottom: 35px;
     }
