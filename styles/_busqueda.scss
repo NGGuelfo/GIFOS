@@ -1,105 +1,125 @@
 @import "./variables";
 
 main .buscador {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  h2 {
+    @include menu-lista;
+    color: $azul-textos;
+    font-size: 25px;
+    line-height: 33px;
+    padding-left: 54px;
+    padding-right: 54px;
+    padding-bottom: 31px;
+
+    span {
+      color: $subrayado;
+    }
+  }
+
+  #muchachos {
+    width: 273px;
+    align-self: center;
+  }
+  .busqueda {
+    padding-top: 15px;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    border: 1px solid $azul-textos;
 
-    h2 {
-        @include menu-lista;
-        color: $azul-textos;
-        font-size: 25px;
-        line-height: 33px;
-        padding-left: 54px;
-        padding-right: 54px;
-        padding-bottom: 31px;
+    width: 334px;
+    align-self: center;
+    border-radius: 27px;
 
-        span {
-            color: $subrayado;
+    .contenedor {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .ingresoDatos {
+        img{
+          width: 20px;
         }
-    }
-
-    #muchachos {
-        width: 273px;
-        align-self: center;
-    }
-
-    .busqueda {
-        align-self: center;
-        border: 1px solid $azul-textos;
-        border-radius: 27px;
-        width: 334px;
-        height: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 20px;
-        padding-right: 20px;
-
-        .contenedor {
-            display: flex;
-
-            img {
-                width: 20px;
-                display: none;
-            }
-            input {
-                border: none;
-                padding-left: 10px;
-            }
+        #textoBuscado {
+          padding-left: 13px;
+          border: 0;
         }
-        button {
+        }
+        #btnBuscar {
+            border: 0;
             background-color: $blanco;
-            border: none;
-
-            #cruz{
-                display: none;
+            #cruz {
+              display: none;
             }
-        }
+          }
     }
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style: none;
+        padding-left: 28px;
+        padding-top: 10px;
+        li {
+          padding-top: 10px;
+          img {
+            width: 20px;
+          }
+          a {
+            @include estilo-sugerencias;
+            padding-left: 15px;
+          }
+        }
+        li:last-child {
+          padding-bottom: 18px;
+        }
+      }
+    }
+  
 
-    .trending {
-        h3 {
-            @include menu-lista;
-            font-size: 16px;
-            color: $azul-textos;
-            line-height: 25px;
-            padding-top: 31px;
-        }
-        h4 {
-            @include menu-lista;
-            color: $azul-textos;
-            font-weight: 500;
-            padding-left: 75px;
-            padding-right: 75px;
-            line-height: 25px;
-            padding-bottom: 35px;
-        }
+  .trending {
+    h3 {
+      @include menu-lista;
+      font-size: 16px;
+      color: $azul-textos;
+      line-height: 25px;
+      padding-top: 31px;
     }
+    h4 {
+      @include menu-lista;
+      color: $azul-textos;
+      font-weight: 500;
+      padding-left: 75px;
+      padding-right: 75px;
+      line-height: 25px;
+      padding-bottom: 35px;
+    }
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    main .buscador {
-        padding-top: 76px;
+  main .buscador {
+    padding-top: 76px;
 
-        h2 {
-            font-size: 35px;
-            line-height: 50px;
-            padding-bottom: 24px;
-            padding-left: 420px;
-            padding-right: 420px;
-        }
-        #muchachos {
-            width: 399px;
-            align-self: center;
-        }
-        .busqueda {
-            width: 551px;
-        }
-        .trending {
-            h3 {
-                padding-top: 4.8%;
-            }
-        }
+    h2 {
+      font-size: 35px;
+      line-height: 50px;
+      padding-bottom: 24px;
+      padding-left: 420px;
+      padding-right: 420px;
     }
+    #muchachos {
+      width: 399px;
+      align-self: center;
+    }
+    .busqueda {
+      width: 551px;
+    }
+    .trending {
+      h3 {
+        padding-top: 4.8%;
+      }
+    }
+  }
 }
