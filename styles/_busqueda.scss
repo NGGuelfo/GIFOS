@@ -38,45 +38,44 @@ main .buscador {
       flex-direction: row;
       justify-content: space-around;
       .ingresoDatos {
-        img{
+        img {
           width: 20px;
         }
         #textoBuscado {
           padding-left: 13px;
           border: 0;
         }
-        }
-        #btnBuscar {
-            border: 0;
-            background-color: $blanco;
-            #cruz {
-              display: none;
-            }
-          }
-    }
-      ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        list-style: none;
-        padding-left: 28px;
-        padding-top: 10px;
-        li {
-          padding-top: 10px;
-          img {
-            width: 20px;
-          }
-          a {
-            @include estilo-sugerencias;
-            padding-left: 15px;
-          }
-        }
-        li:last-child {
-          padding-bottom: 18px;
+      }
+      #btnBuscar {
+        border: 0;
+        background-color: $blanco;
+        #cruz {
+          display: none;
         }
       }
     }
-  
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      list-style: none;
+      padding-left: 28px;
+      padding-top: 10px;
+      li {
+        padding-top: 10px;
+        img {
+          width: 20px;
+        }
+        a {
+          @include estilo-sugerencias;
+          padding-left: 15px;
+        }
+      }
+      li:last-child {
+        padding-bottom: 18px;
+      }
+    }
+  }
 
   .trending {
     h3 {

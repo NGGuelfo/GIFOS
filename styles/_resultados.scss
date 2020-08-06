@@ -1,45 +1,45 @@
 @import "./variables";
 
 .resultadosBusqueda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    @include menu-lista;
+    color: $azul-textos;
+    font-size: 25px;
+    line-height: 40px;
+    padding-left: 54px;
+    padding-right: 54px;
+    padding-bottom: 38px;
+  }
+  .resultados {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h2 {
-        @include menu-lista;
-        color: $azul-textos;
-        font-size: 25px;
-        line-height: 40px;
-        padding-left: 54px;
-        padding-right: 54px;
-        padding-bottom: 38px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    img {
+      width: 156px;
+      padding-bottom: 25px;
+      padding-left: 21px;
     }
-    .resultados {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        img {
-            width: 156px;
-            padding-bottom: 25px;
-            padding-left: 21px;
-        }
+  }
+  .vermas {
+    padding-bottom: 78px;
+    padding-top: 78px;
+    .boton {
+      color: $azul-textos;
+      background-color: $blanco;
+      border: none;
+      border: 1px solid $azul-textos;
+      border-radius: 25px;
+      width: 127px;
+      height: 50px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 13px;
+      letter-spacing: 0;
+      text-align: center;
+      font-weight: 700;
     }
-    .vermas {
-        padding-bottom: 78px;
-        padding-top: 78px;
-        .boton {
-            color: $azul-textos;
-            background-color: $blanco;
-            border: none;
-            border: 1px solid $azul-textos;
-            border-radius: 25px;
-            width: 127px;
-            height: 50px;
-            font-family: "Montserrat", sans-serif;
-            font-size: 13px;
-            letter-spacing: 0;
-            text-align: center;
-            font-weight: 700;
-        }
-    }
+  }
 }

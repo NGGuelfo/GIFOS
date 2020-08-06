@@ -2,16 +2,16 @@ let trendingGifos = document.getElementById("tGifos");
 
 document.addEventListener("DOMContentLoaded", gifosActuales);
 
-function gifosActuales(){
+function gifosActuales() {
 
     fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=2`)
-    .then(response => response.json())
-    .then(content => {
+        .then(response => response.json())
+        .then(content => {
 
-        for(let i = 0; i < content.data.length; i++){
+            for (let i = 0; i < content.data.length; i++) {
 
-        
-        trendingGifos.innerHTML += `
+
+                trendingGifos.innerHTML += `
         <div class="contenedor">
         <div class="overlay">
                         <div class="iconos">
@@ -25,10 +25,10 @@ function gifosActuales(){
                     <img src="${content.data[i].images.downsized.url}" alt="${content.data[i].title}">
                     </div>
         `;
-    }
+            }
 
-    })
-    .catch(err => {
-        console.log(err);
-    })
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }

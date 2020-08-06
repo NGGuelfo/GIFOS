@@ -5,77 +5,73 @@ $color-redes: #cdd6e0;
 $fondo-menu: rgba(87, 46, 229, 0.9);
 $subrayado: #5ed7c6;
 $trending-background: #f3f5f8;
-$detalle-bordes: #50E3C2;
-$gris-sugerencias: #9CAFC3;
+$detalle-bordes: #50e3c2;
+$gris-sugerencias: #9cafc3;
 
 @mixin menu-lista {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: $blanco;
-    text-align: center;
-    line-height: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: $blanco;
+  text-align: center;
+  line-height: 60px;
 }
 
 @mixin texto-negro {
-    font-family: "Roboto", sans-serif;
-    color: $negro;
-    font-size: 16px;
-    text-align: center;
-    line-height: 23px;
+  font-family: "Roboto", sans-serif;
+  color: $negro;
+  font-size: 16px;
+  text-align: center;
+  line-height: 23px;
 }
 
-@mixin texto-grabador{
-
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 25px;
-    color: $azul-textos;
-    text-align: center;
-    line-height: 35px;
+@mixin texto-grabador {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: $azul-textos;
+  text-align: center;
+  line-height: 35px;
 }
 
 @mixin subtexto-grabador {
-    font-family: "Roboto", sans-serif;
-    color: $negro;
-    font-size: 16px;
-    text-align: center;
-    line-height: 29px;
+  font-family: "Roboto", sans-serif;
+  color: $negro;
+  font-size: 16px;
+  text-align: center;
+  line-height: 29px;
 }
 
-@mixin subiendo-gif{
-    
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: $blanco;
-    text-align: center;
+@mixin subiendo-gif {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: $blanco;
+  text-align: center;
 }
 
 @mixin estilo-contador {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0;
-    color: $azul-textos;
-    text-align: center;
-    line-height: 22px
-
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0;
+  color: $azul-textos;
+  text-align: center;
+  line-height: 22px;
 }
 
-@mixin estilo-repCaptura{
-
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0;
-    color: $azul-textos;
-    text-align: center;
+@mixin estilo-repCaptura {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0;
+  color: $azul-textos;
+  text-align: center;
 }
 
-@mixin estilo-sugerencias{
-    font-family: "Roboto", sans-serif;
-    color: $gris-sugerencias;
-    font-size: 16px;
-    text-align: left;
+@mixin estilo-sugerencias {
+  font-family: "Roboto", sans-serif;
+  color: $gris-sugerencias;
+  font-size: 16px;
+  text-align: left;
 }
