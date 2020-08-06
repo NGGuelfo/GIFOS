@@ -8,20 +8,22 @@ let lupa = document.getElementById("lupa");
 let cruz = document.getElementById("cruz");
 let tituloResultado = document.getElementById("tituloResultado");
 let seccionResult = document.getElementById("seccion-resultados");
-
+let vermas = document.getElementById("mas");
+let offset = 0;
 btnBuscar.addEventListener("click", buscando);
 textoBuscado.addEventListener("keyup",sugerencias);
 opciones.addEventListener("click",sugerido);
+vermas.addEventListener("click", masResultados);
+
 
 function buscando(){
 
-    fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${textoBuscado.value}&limit=12&offset=0`)
+    fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${textoBuscado.value}&limit=12&offset=${offset}`)
     .then(data => data.json())
     .then(response => {
         
         seccionResult.style.display = 'flex';
         tituloResultado.innerText = textoBuscado.value;
-        textoBuscado.value = "";
         opciones.innerHTML = ``;
         lupaGris.style.display = "none";
         lupa.style.display = "flex";
@@ -73,7 +75,6 @@ function sugerido(e){
     .then(response => {
         seccionResult.style.display = 'flex';
         tituloResultado.innerText = e.target.innerText;
-        textoBuscado.value = "";
         opciones.innerHTML = ``;
         lupaGris.style.display = "none";
         lupa.style.display = "flex";
@@ -83,4 +84,10 @@ function sugerido(e){
         }
     })
     .catch(err => console.log(err));
+}
+
+function masResultados(){
+    debugger;
+    offset = offset + 12;
+    buscando();
 }
