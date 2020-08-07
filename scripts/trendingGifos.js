@@ -9,8 +9,6 @@ function gifosActuales() {
         .then(content => {
 
             for (let i = 0; i < content.data.length; i++) {
-
-
                 trendingGifos.innerHTML += `
         <div class="contenedor">
         <div class="overlay">
@@ -22,7 +20,7 @@ function gifosActuales() {
                         <h4>${content.data[i].username}</h4>
                         <h3>${content.data[i].title}</h3>
         </div>
-                    <img src="${content.data[i].images.downsized.url}" alt="${content.data[i].title}">
+                    <img src="${content.data[i].images.downsized.url}" alt="${content.data[i].id}">
                     </div>
         `;
             }

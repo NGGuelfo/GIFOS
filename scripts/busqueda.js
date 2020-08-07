@@ -16,51 +16,60 @@ let modas = document.getElementById("modas");
 
 document.addEventListener("DOMContentLoaded", trendActuales);
 btnBuscar.addEventListener("click", buscando);
-textoBuscado.addEventListener("keyup",sugerencias);
-opciones.addEventListener("click",sugerido);
+textoBuscado.addEventListener("keyup", sugerencias);
+opciones.addEventListener("click", sugerido);
 vermas.addEventListener("click", masResultados);
 modas.addEventListener("click", sugerido);
 
-function buscando(){
+function buscando() {
 
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${textoBuscado.value}&limit=12&offset=${offset}`)
-    .then(data => data.json())
-    .then(response => {
-        
-        seccionResult.style.display = 'flex';
-        tituloResultado.innerText = textoBuscado.value;
-        opciones.innerHTML = ``;
-        lupaGris.style.display = "none";
-        lupa.style.display = "flex";
-        cruz.style.display = "none";
-        for(let i=0;i< response.data.length;i++){
-        resultados(response.data[i]);
-        }
-    })
-    .catch(err => console.log(err));
+        .then(data => data.json())
+        .then(response => {
+
+            seccionResult.style.display = 'flex';
+            tituloResultado.innerText = textoBuscado.value;
+            opciones.innerHTML = ``;
+            lupaGris.style.display = "none";
+            lupa.style.display = "flex";
+            cruz.style.display = "none";
+            for (let i = 0; i < response.data.length; i++) {
+                resultados(response.data[i]);
+            }
+        })
+        .catch(err => console.log(err));
 }
 
-function resultados(params){
+function resultados(params) {
 
-        result.innerHTML += `
+    result.innerHTML += `
         
-        <img src="${params.images.downsized.url}" alt="${params.title}">
-        
-        
+        <div class="contenedor">
+            <div class="overlay">
+                        <div class="iconos">
+                            <button><i class="far fa-heart"></i></button>
+                            <button><i class="fas fa-download"></i></button>
+                            <button><i class="fas fa-expand-alt"></i></button>
+                        </div>
+                        <h4>${params.username}</h4>
+                        <h3>${params.title}</h3>
+            </div>
+                    <img src="${params.images.downsized.url}" alt="${params.id}">
+        </div>
         `;
-    
+
 }
 
-function sugerencias(){
+function sugerencias() {
 
     fetch(`https://api.giphy.com/v1/tags/related/${textoBuscado.value}?api_key=${apikey}`)
-    .then(data => data.json())
-    .then(resp => {
+        .then(data => data.json())
+        .then(resp => {
 
-        lupaGris.style.display = "inline-block";
-        lupa.style.display = "none";
-        cruz.style.display = "flex";
-        opciones.innerHTML = `
+            lupaGris.style.display = "inline-block";
+            lupa.style.display = "none";
+            cruz.style.display = "flex";
+            opciones.innerHTML = `
         
         <li><img src="media/icon-search-gris.svg" alt="icon-search-gris"><a class="extra">${resp.data[0].name}</a></li>
         <li><img src="media/icon-search-gris.svg" alt="icon-search-gris"><a class="extra">${resp.data[1].name}</a></li>
@@ -69,30 +78,30 @@ function sugerencias(){
         
         
         `;
-    })
-    .catch(err => console.log(err));
+        })
+        .catch(err => console.log(err));
 }
 
-function sugerido(e){
+function sugerido(e) {
 
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${e.target.innerText}&limit=12&offset=0`)
-    .then(data => data.json())
-    .then(response => {
-        textoBuscado.value = e.target.innerText;
-        seccionResult.style.display = 'flex';
-        tituloResultado.innerText = e.target.innerText;
-        opciones.innerHTML = ``;
-        lupaGris.style.display = "none";
-        lupa.style.display = "flex";
-        cruz.style.display = "none";
-        for(let i=0;i< response.data.length;i++){
-        resultados(response.data[i]);
-        }
-    })
-    .catch(err => console.log(err));
+        .then(data => data.json())
+        .then(response => {
+            textoBuscado.value = e.target.innerText;
+            seccionResult.style.display = 'flex';
+            tituloResultado.innerText = e.target.innerText;
+            opciones.innerHTML = ``;
+            lupaGris.style.display = "none";
+            lupa.style.display = "flex";
+            cruz.style.display = "none";
+            for (let i = 0; i < response.data.length; i++) {
+                resultados(response.data[i]);
+            }
+        })
+        .catch(err => console.log(err));
 }
 
-function masResultados(){
+function masResultados() {
 
     offset = offset + 12;
     buscando();
@@ -120,5 +129,10 @@ function trendActuales() {
             console.log(err);
 
         });
+
+}
+
+function favoritos() {
+
 
 }

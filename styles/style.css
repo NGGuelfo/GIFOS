@@ -438,7 +438,8 @@ main .resultadosBusqueda {
   padding-bottom: 38px;
 }
 
-.resultadosBusqueda .resultados {
+.resultadosBusqueda #resultadoBusqueda {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,10 +450,85 @@ main .resultadosBusqueda {
       flex-wrap: wrap;
 }
 
-.resultadosBusqueda .resultados img {
+.resultadosBusqueda #resultadoBusqueda .contenedor {
   width: 156px;
-  padding-bottom: 25px;
-  padding-left: 21px;
+  height: 120px;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay {
+  display: none;
+  position: absolute;
+  width: 156px;
+  height: 120px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(87, 46, 229, 0.6);
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay .iconos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay .iconos button {
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  border: 0;
+  border-radius: 6px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  color: #572ee5;
+  opacity: 0.5;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay .iconos button i {
+  width: 100%;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay .iconos button:last-child {
+  margin-right: 10px;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay .iconos button:first-child:hover {
+  fill: #572ee5;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay .iconos button:hover {
+  opacity: 1;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay h4 {
+  padding-top: 70px;
+  padding-left: 13px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor .overlay h3 {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  padding-left: 13px;
+}
+
+.resultadosBusqueda #resultadoBusqueda .contenedor img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .resultadosBusqueda .vermas {
@@ -528,11 +604,10 @@ main .resultadosBusqueda {
 }
 
 .trendingGifos .gifos .contenedor .overlay {
-  z-index: 1;
   display: none;
   position: absolute;
-  width: 100%;
-  height: 162px;
+  width: 243px;
+  height: 187px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -602,6 +677,10 @@ main .resultadosBusqueda {
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.trendingGifos .gifos .contenedor:hover .overlay {
+  display: block;
 }
 
 @media screen and (min-width: 1440px) {
