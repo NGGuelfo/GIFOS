@@ -1,5 +1,7 @@
 let trendingGifos = document.getElementById("tGifos");
 
+let apikey = 'aABJW22BM12Yf086ZASgx2ZDaOkwCw0e';
+
 document.addEventListener("DOMContentLoaded", gifosActuales);
 
 function gifosActuales() {

@@ -1,14 +1,5 @@
 @import "./variables";
-@import "./header";
-@import "./footer";
-@import "./redes";
-@import "./trending";
 
-* {
-  box-sizing: border-box;
-  margin: auto 0;
-  padding: 0;
-}
 .mGifos {
   display: flex;
   flex-direction: column;

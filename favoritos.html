@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/favoritos.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"
         rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9f61133a44.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
@@ -25,9 +26,9 @@
                 <span></span>
                 <ul>
                     <li><a href="#">Modo Nocturno</a></li>
-                    <li><a href="favoritos.html">Favoritos</a></li>
-                    <li><a href="#">Mis GIFOS</a></li>
-                    <li><a href="#" id="btnCrearGifo"><img id="masNoHover" src="media/button-crear-gifo.svg"
+                    <li><a href="#">Favoritos</a></li>
+                    <li><a href="misgifos.html">Mis GIFOS</a></li>
+                    <li><a href="creargifo.html" id="btnCrearGifo"><img id="masNoHover" src="media/button-crear-gifo.svg"
                                 alt="button-crear-gifo">
                             <img id="masHover" src="media/button-crear-gifo-hover.svg"
                                 alt="button-crear-gifo-hover"></a></li>
@@ -54,24 +55,23 @@
         <section class="trendingGifos">
 
             <h2>Trending GIFOS</h2>
-            <p>Mira los ultimos</p>
-            <p>GIFOS de nuestra comunidad.</p>
-            <div>
-                <img src="media/697b023b-64a5-49a0-8059-27b963453fb1.gif" alt="gif">
-            </div>
-        </section>
-        <section class="compartir">
-            <p>Compartir en:</p>
-            <div class="redes">
-                <img src="media/icon_facebook.svg" alt="icon-facebook">
-                <img src="media/icon-twitter.svg" alt="icon-twitter">
-                <img src="media/icon_instagram.svg" alt="icon_instagram">
+            <p>Mira los ultimos GIFOS de nuestra comunidad.</p>
+            <div id="tGifos" class="gifos">
             </div>
         </section>
     </main>
     <footer>
-        <p>© GIFOS 2020 All Rights Reserved.</p>
+        <div class="compartir">
+            <p>Compartir en:</p>
+            <div class="redes">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p class="copyright">© GIFOS 2020 All Rights Reserved.</p>
     </footer>
+    <script src="scripts/trendingGifos.js"></script>
 </body>
 
 </html>

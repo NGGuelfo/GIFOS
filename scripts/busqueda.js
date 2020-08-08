@@ -11,7 +11,6 @@ let seccionResult = document.getElementById("seccion-resultados");
 let vermas = document.getElementById("mas");
 let offset = 0;
 let trend = document.getElementById("trend");
-let apikey = "aABJW22BM12Yf086ZASgx2ZDaOkwCw0e";
 let modas = document.getElementById("modas");
 
 document.addEventListener("DOMContentLoaded", trendActuales);
