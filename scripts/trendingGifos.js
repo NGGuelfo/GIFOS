@@ -1,5 +1,4 @@
 let trendingGifos = document.getElementById("tGifos");
-
 let apikey = 'aABJW22BM12Yf086ZASgx2ZDaOkwCw0e';
 
 document.addEventListener("DOMContentLoaded", gifosActuales);
@@ -15,9 +14,9 @@ function gifosActuales() {
         <div class="contenedor">
         <div class="overlay">
                         <div class="iconos">
-                            <button><i class="far fa-heart"></i></button>
-                            <button><i class="fas fa-download"></i></button>
-                            <button><i class="fas fa-expand-alt"></i></button>
+                            <button class="btnFavorito"><i class="far fa-heart"></i></button>
+                            <button class="btnDescarga"><i class="fas fa-download"></i></button>
+                            <button class="btnAumentar"><i class="fas fa-expand-alt"></i></button>
                         </div>
                         <h4>User: "${content.data[i].username}"</h4>
                         <h3>${content.data[i].title}</h3>

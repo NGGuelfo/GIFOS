@@ -5,6 +5,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: none;
+  #fallaBusqueda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .textoError {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: #50e3c2;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
   h2 {
     @include menu-lista;
     color: $azul-textos;
@@ -100,23 +114,22 @@
     }
   }
 }
-@media screen and (max-width: 1440px){
-
-  .resultadosBusqueda{
+@media screen and (min-width: 1440px) {
+  .resultadosBusqueda {
     padding-left: 156px;
     padding-right: 156px;
-    #resultadoBusqueda{
-      .contenedor{
+    #resultadoBusqueda {
+      .contenedor {
         width: 260px;
         height: 200px;
-        .overlay{
+        .overlay {
           width: 260px;
           height: 180px;
         }
       }
-      .contenedor:hover{
-        .overlay{
-        display: block;
+      .contenedor:hover {
+        .overlay {
+          display: block;
         }
       }
     }

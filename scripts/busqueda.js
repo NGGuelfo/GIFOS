@@ -25,6 +25,35 @@ function buscando() {
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${textoBuscado.value}&limit=12&offset=${offset}`)
         .then(data => data.json())
         .then(response => {
+            result.innerHTML = '';
+            seccionResult.style.display = 'flex';
+            tituloResultado.innerText = textoBuscado.value;
+            opciones.innerHTML = ``;
+            lupaGris.style.display = "none";
+            lupa.style.display = "flex";
+            cruz.style.display = "none";
+            if(response.data == 0){
+                result.innerHTML = `
+                
+                <div id="fallaBusqueda">
+                    <img src="media/icon-busqueda-sin-resultado.svg" alt="imagen-error-busqueda">
+                    <h3 class="textoError">Intenta con otra Busqueda</h3>
+                </div>
+                `;
+            } else{
+            for (let i = 0; i < response.data.length; i++) {
+                resultados(response.data[i]);
+            }
+        }
+        })
+        .catch(err => console.log(err));
+}
+
+function buscandoVerMas() {
+
+    fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${textoBuscado.value}&limit=12&offset=${offset}`)
+        .then(data => data.json())
+        .then(response => {
 
             seccionResult.style.display = 'flex';
             tituloResultado.innerText = textoBuscado.value;
@@ -103,7 +132,7 @@ function sugerido(e) {
 function masResultados() {
 
     offset = offset + 12;
-    buscando();
+    buscandoVerMas();
 }
 
 function trendActuales() {

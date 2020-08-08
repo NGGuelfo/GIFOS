@@ -486,10 +486,6 @@ main .buscador .trending ul {
   padding-bottom: 35px;
 }
 
-main .resultadosBusqueda {
-  display: none;
-}
-
 @media screen and (min-width: 1440px) {
   main .buscador {
     padding-top: 76px;
@@ -529,6 +525,29 @@ main .resultadosBusqueda {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
+}
+
+.resultadosBusqueda #fallaBusqueda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.resultadosBusqueda #fallaBusqueda .textoError {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #50e3c2;
+  text-align: center;
+  line-height: 25px;
 }
 
 .resultadosBusqueda h2 {
@@ -660,7 +679,7 @@ main .resultadosBusqueda {
   font-weight: 700;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .resultadosBusqueda {
     padding-left: 156px;
     padding-right: 156px;
