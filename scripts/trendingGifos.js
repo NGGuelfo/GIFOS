@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", gifosActuales);
 
 function gifosActuales() {
 
-    fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=2`)
+    fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=4`)
         .then(response => response.json())
         .then(content => {
 

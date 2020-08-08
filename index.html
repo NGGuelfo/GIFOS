@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="modal">
+    <div id="modal" class="modal">
         <div class="modalContainer">
            <button type="button" id="btnCerrar"><img src="media/close.svg" alt="cerrar"></button>
            <img id="maxGif" src="media/697b023b-64a5-49a0-8059-27b963453fb1.gif" alt="gif prueba">
@@ -22,8 +22,8 @@
                    <h3>Titulo GIFO</h3>
                </div>
                <div id="maxGifoBotones">
-                <button type="button" class="fav"><i class="fas fa-heart"></i></button>
-                <button type="button" class="download"><i class="fas fa-download"></i></button>
+                <button id="btnFav" type="button" class="fav"><i class="fas fa-heart"></i></button>
+                <button id="btnDload" type="button" class="download"><i class="fas fa-download"></i></button>
                </div>
            </div>
         </div>
@@ -123,6 +123,7 @@
     </footer>
     <script src="scripts/trendingGifos.js"></script>
     <script src="scripts/busqueda.js"></script>
+    <script src="scripts/modal.js"></script>
 </body>
 
 </html>

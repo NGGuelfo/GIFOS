@@ -15,11 +15,12 @@ body .modal {
   overflow: hidden;
   background-color: black;
   /* Fallback color */
-  background-color: rgba(255, 255, 255, 0.9);
-  /* Black w/ opacity */
+  background-color: #ffffff;
+  opacity: 0.9;
 }
 
 body .modal .modalContainer {
+  width: 100%;
   padding-top: 59px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,6 +93,23 @@ body .modal .modalContainer #maxGifoTitle #maxGifoBotones button i {
 
 body .modal .modalContainer #maxGifoTitle #maxGifoBotones button:hover {
   opacity: 1;
+}
+
+@media screen and (min-width: 1440px) {
+  body .modal {
+    background-color: #FFFFFF;
+    opacity: 1;
+  }
+  body .modal .modalContainer button {
+    margin-right: 278px;
+  }
+  body .modal .modalContainer #maxGif {
+    width: 695px;
+    height: 385px;
+  }
+  body .modal .modalContainer #maxGifoTitle {
+    width: 695px;
+  }
 }
 
 body {
@@ -492,7 +510,7 @@ main .resultadosBusqueda {
     width: 551px;
   }
   main .buscador .trending h3 {
-    padding-top: 4.8%;
+    padding-top: 69px;
   }
 }
 
@@ -542,6 +560,7 @@ main .resultadosBusqueda {
 .resultadosBusqueda #resultadoBusqueda .contenedor {
   width: 156px;
   height: 120px;
+  padding-bottom: 20px;
 }
 
 .resultadosBusqueda #resultadoBusqueda .contenedor .overlay {
@@ -638,6 +657,24 @@ main .resultadosBusqueda {
   letter-spacing: 0;
   text-align: center;
   font-weight: 700;
+}
+
+@media screen and (max-width: 1440px) {
+  .resultadosBusqueda {
+    padding-left: 156px;
+    padding-right: 156px;
+  }
+  .resultadosBusqueda #resultadoBusqueda .contenedor {
+    width: 260px;
+    height: 200px;
+  }
+  .resultadosBusqueda #resultadoBusqueda .contenedor .overlay {
+    width: 260px;
+    height: 180px;
+  }
+  .resultadosBusqueda #resultadoBusqueda .contenedor:hover .overlay {
+    display: block;
+  }
 }
 
 .trendingGifos {
@@ -768,17 +805,14 @@ main .resultadosBusqueda {
   height: 100%;
 }
 
-.trendingGifos .gifos .contenedor:hover .overlay {
-  display: block;
-}
-
 @media screen and (min-width: 1440px) {
   .trendingGifos .gifos .contenedor {
     width: 357px;
+    height: 275px;
   }
   .trendingGifos .gifos .contenedor .overlay {
     width: 357px;
-    height: 238px;
+    height: 275px;
   }
   .trendingGifos .gifos .contenedor .overlay h4 {
     padding-top: 109px;
