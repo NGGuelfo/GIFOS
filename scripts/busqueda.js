@@ -51,7 +51,7 @@ function resultados(params) {
                             <button><i class="fas fa-download"></i></button>
                             <button><i class="fas fa-expand-alt"></i></button>
                         </div>
-                        <h4>${params.username}</h4>
+                        <h4>User: "${params.username}"</h4>
                         <h3>${params.title}</h3>
             </div>
                     <img src="${params.images.downsized.url}" alt="${params.id}">

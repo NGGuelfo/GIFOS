@@ -17,7 +17,7 @@ function gifosActuales() {
                             <button><i class="fas fa-download"></i></button>
                             <button><i class="fas fa-expand-alt"></i></button>
                         </div>
-                        <h4>${content.data[i].username}</h4>
+                        <h4>User: "${content.data[i].username}"</h4>
                         <h3>${content.data[i].title}</h3>
         </div>
                     <img src="${content.data[i].images.downsized.url}" alt="${content.data[i].id}">
