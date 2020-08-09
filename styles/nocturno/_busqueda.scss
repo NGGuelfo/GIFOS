@@ -1,5 +1,6 @@
 @import "./variables";
 
+.darkBody{
 main .buscador {
   display: flex;
   flex-direction: column;
@@ -122,4 +123,5 @@ main .buscador {
       }
     }
   }
+}
 }

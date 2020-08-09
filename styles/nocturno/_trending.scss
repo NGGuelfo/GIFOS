@@ -1,5 +1,6 @@
 @import "./variables";
 
+.darkBody{
 .trendingGifos {
   background-color: $trending-background;
   overflow: hidden;
@@ -109,4 +110,5 @@
       display: block;
     }
   }
+}
 }

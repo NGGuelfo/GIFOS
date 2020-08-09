@@ -1,5 +1,6 @@
 @import "./variables";
 
+.darkBody{
 footer {
   border-bottom: 5px solid $azul-textos;
   p {
@@ -78,4 +79,5 @@ footer {
       padding-right: 156px;
     }
   }
+}
 }

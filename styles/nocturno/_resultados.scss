@@ -1,5 +1,6 @@
 @import "./variables";
 
+.darkBody{
 .resultadosBusqueda {
   display: flex;
   flex-direction: column;
@@ -134,4 +135,5 @@
       }
     }
   }
+}
 }

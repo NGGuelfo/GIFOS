@@ -1,5 +1,6 @@
 @import "./variables";
 
+.darkBody{
 body .modal {
   display: none;
   position: fixed;
@@ -89,4 +90,5 @@ body .modal {
       }
     }
   }
+}
 }

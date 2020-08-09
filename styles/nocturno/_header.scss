@@ -1,5 +1,6 @@
 @import "./variables";
 
+.darkBody{
 body {
   border-top: 5px solid $azul-textos;
 
@@ -191,4 +192,5 @@ body {
       }
     }
   }
+}
 }

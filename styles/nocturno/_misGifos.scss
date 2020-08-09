@@ -1,5 +1,6 @@
 @import "./variables";
 
+.darkBody{
 .mGifos {
   display: flex;
   flex-direction: column;
@@ -138,4 +139,5 @@
   .mGifos .mgif .contenedor:hover .overlay {
     display: block;
   }
+}
 }
