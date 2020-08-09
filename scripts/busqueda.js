@@ -76,9 +76,9 @@ function resultados(params) {
         <div class="contenedor">
             <div class="overlay">
                         <div class="iconos">
-                            <button><i class="far fa-heart"></i></button>
+                            <button onclick="fav('${content.data[i].id}')"><i class="far fa-heart"></i></button>
                             <button onclick="descargar('${params.images.downsized.url}')"><i class="fas fa-download"></i></button>
-                            <button onclick="maximizar('${params.images.downsized.url}','${params.title}','${params.username}')"><i class="fas fa-expand-alt"></i></button>
+                            <button onclick="maximizar('${params.images.downsized.url}','${params.title}','${params.username}','${params.id}')"><i class="fas fa-expand-alt"></i></button>
                         </div>
                         <h4>User: "${params.username}"</h4>
                         <h3>${params.title}</h3>
@@ -170,27 +170,29 @@ async function descargar(valor){
     
 }
 
-function maximizar(url,titulo,usuario){
+function maximizar(url,titulo,usuario,altImagen){
 
-let idModal = document.getElementById("modal");
+let imagen = document.getElementById("maxGif");
+let tituloMax = document.getElementById("tituloMax");
+let user = document.getElementById("usuarioMax");
 modal.style.display = "block";
-idModal.innerHTML = `
 
-<div class="modalContainer">
-           <button type="button" id="btnCerrar"><img src="media/close.svg" alt="cerrar"></button>
-           <img id="maxGif" src="${url}" alt="gif prueba">
-           <div id="maxGifoTitle">
-               <div id="elementos">
-                   <h4 id="usuarioMax">${usuario}</h4>
-                   <h3 id="tituloMax">${titulo}</h3>
-               </div>
-               <div id="maxGifoBotones">
-                <button id="btnFav" type="button" class="fav"><i class="fas fa-heart"></i></button>
-                <button id="btnDload" type="button" class="download"><i class="fas fa-download"></i></button>
-               </div>
-           </div>
-        </div>
+imagen.src = url;
+tituloMax.innerText = titulo;
+user.innerText = "Usuario: " + usuario;
+imagen.alt = altImagen;
+}
+
+function fav(variable){
 
 
-`;
+    let fav = [];
+
+    if (localStorage.getItem("favoritos") == null) {
+        localStorage.setItem("favoritos", JSON.stringify(fav.push(variable)));
+    } else {
+        fav.push(JSON.parse(localStorage.getItem("favoritos")));
+        fav.push(variable);
+        localStorage.setItem("favoritos", JSON.stringify(fav));
+    }
 }

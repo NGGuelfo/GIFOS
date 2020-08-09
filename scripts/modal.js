@@ -1,35 +1,33 @@
 let btnCerrar = document.getElementById("btnCerrar");
 let btnFav = document.getElementById("btnFav");
 let btnDownload = document.getElementById("btnDload");
-let modal = document.getElementById("modal");
-let gif = document.getElementById("maxGif").src;
-let idGif = document.getElementById("maxGif").alt;
 btnCerrar.addEventListener("click", cerrar);
 btnDownload.addEventListener("click", descargamodal);
 btnFav.addEventListener("click", favoritos);
 
-function cerrar(){
+function cerrar() {
 
     modal.style.display = "none";
 }
 
-async function descargamodal(){
+async function descargamodal() {
 
-    let blob = await fetch(gif).then(r => r.blob());
-    invokeSaveAsDialog(blob,"archivo.gif");
+    let url = document.getElementById("maxGif").src;
+    let blob = await fetch(url).then(r => r.blob());
+    invokeSaveAsDialog(blob, "archivo.gif");
 }
 
-function favoritos(){
+function favoritos() {
+
+    let idGif = document.getElementById("maxGif").alt;
 
     let favoritos = [];
 
-    if(localstorage.getItem("favoritos") == null){
+    if (localStorage.getItem("favoritos") == null) {
+        localStorage.setItem("favoritos", JSON.stringify(favoritos.push(idGif)));
+    } else {
+        favoritos.push(JSON.parse(localStorage.getItem("favoritos")));
         favoritos.push(idGif);
-        localstorage.setItem("favoritos", JSON.stringify(favoritos));
-    } else{
-        favoritos.push(JSON.parse(localstorage.getItem("favoritos")));
-        favoritos.push(idGif);
-        localstorage.setItem("favoritos", JSON.stringify(favoritos));
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
     }
-    
 }

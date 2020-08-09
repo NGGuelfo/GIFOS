@@ -148,8 +148,16 @@ async function cargarGifo() {
             cargando.style.display = "none";
             gifCargado.style.display = 'flex';
             btnDescargar.style.display = "flex";
-            localstorage.setItem('misGifos', obj.data.id);
-            console.log(localstorage.getItem('misGifos'));
+            let arr = [];
+
+            if(localStorage.getItem("misgifos") == null){
+                arr.push(obj.data.id);
+            localStorage.setItem('misGifos', JSON.stringify(arr));
+            } else{
+                arr.push(JSON.parse(localStorage.getItem("misgifos")));
+                arr.push(obj.data.id);
+                localStorage.setItem('misGifos', JSON.stringify(arr));
+            }
         })
         .catch(err => console.log(err));
 

@@ -14,9 +14,9 @@ function gifosActuales() {
         <div class="contenedor">
         <div class="overlay">
                         <div class="iconos">
-                            <button class="btnFavorito"><i class="far fa-heart"></i></button>
-                            <button class="btnDescarga"><i class="fas fa-download"></i></button>
-                            <button class="btnAumentar"><i class="fas fa-expand-alt"></i></button>
+                            <button onclick="fav('${content.data[i].id}')" class="btnFavorito"><i class="far fa-heart"></i></button>
+                            <button onclick="descargar('${content.data[i].images.downsized.url}')" class="btnDescarga"><i class="fas fa-download"></i></button>
+                            <button onclick="maximizar('${content.data[i].images.downsized.url}','${content.data[i].title}','${content.data[i].username}','${content.data[i].id}')" class="btnAumentar"><i class="fas fa-expand-alt"></i></button>
                         </div>
                         <h4>User: "${content.data[i].username}"</h4>
                         <h3>${content.data[i].title}</h3>
