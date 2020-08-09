@@ -18,17 +18,16 @@ function cargaDatos() {
 
 `;
         btnMas.style.display = 'none';
-    
+
     } else {
 
         datos.push(JSON.parse(localStorage.getItem("favoritos")));
 
-            fetch(`https://api.giphy.com/v1/gifs?api_key=${apikey}&ids=${datos.toString()}`)
+        fetch(`https://api.giphy.com/v1/gifs?api_key=${apikey}&ids=${datos.toString()}`)
             .then(response => response.json())
             .then(obj => {
-                debugger;
                 for (let i = 0; i < obj.data.length; i++) {
-                rellenar(obj.data[i]);
+                    rellenar(obj.data[i]);
                 }
             })
             .catch(err => console.log(err));
@@ -37,7 +36,7 @@ function cargaDatos() {
 }
 
 
-function rellenar(params){
+function rellenar(params) {
 
     gifsTraidos.innerHTML += `
                 
@@ -57,29 +56,41 @@ function rellenar(params){
 
 
 }
-function noFav(valor){
+function noFav(valor) {
 
-    localStorage.removeItem('favoritos',valor);
+    let auxiliar = [];
+    let arr = localStorage.getItem("favoritos");
+    auxiliar = JSON.parse(arr);
+    let indice = auxiliar.indexOf(valor);
+
+    auxiliar.splice(indice, 1);
+
+    const newFavoritos = JSON.stringify(auxiliar);
+    if (newFavoritos == '[]') {
+        localStorage.removeItem("favoritos");
+    } else {
+        localStorage.setItem("favoritos", newFavoritos);
+    }
 }
 
-async function descargar(valor){
+async function descargar(valor) {
 
     let blob = await fetch(valor).then(r => r.blob())
-    .catch(err => console.log(err));
+        .catch(err => console.log(err));
 
-    invokeSaveAsDialog(blob,"archivo.gif");
-    
+    invokeSaveAsDialog(blob, "archivo.gif");
+
 }
 
-function maximizar(url,titulo,usuario,altImagen){
+function maximizar(url, titulo, usuario, altImagen) {
 
-let imagen = document.getElementById("maxGif");
-let tituloMax = document.getElementById("tituloMax");
-let user = document.getElementById("usuarioMax");
-modal.style.display = "block";
+    let imagen = document.getElementById("maxGif");
+    let tituloMax = document.getElementById("tituloMax");
+    let user = document.getElementById("usuarioMax");
+    modal.style.display = "block";
 
-imagen.src = url;
-tituloMax.innerText = titulo;
-user.innerText = "Usuario: " + usuario;
-imagen.alt = altImagen;
+    imagen.src = url;
+    tituloMax.innerText = titulo;
+    user.innerText = "Usuario: " + usuario;
+    imagen.alt = altImagen;
 }

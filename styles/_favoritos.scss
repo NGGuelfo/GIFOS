@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   .tituloFavoritos {
     padding-top: 22px;
     display: flex;
@@ -26,8 +25,10 @@
     }
   }
   .gifFav {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     padding-bottom: 78px;
     #noFavoritos {
       display: flex;
@@ -46,12 +47,11 @@
     .contenedor {
       width: 156px;
       height: 120px;
-      padding-bottom: 20px;
       .overlay {
         display: none;
         position: absolute;
         width: 156px;
-        height: 120px;
+        height: 140px;
         align-items: center;
         background-color: rgba(87, 46, 229, 0.6);
         .iconos {
@@ -123,18 +123,24 @@
     }
   }
 }
-@media screen and (min-width: 1440px){
-.favoritos{
-  .gifFav .contenedor{
-    width: 260px;
-    height: 200px;
-    .overlay{
-      width: 260px;
-      height: 180px;
+@media screen and (min-width: 1440px) {
+  .favoritos {
+    padding-left: 156px;
+    padding-right: 156px;
+    .gifFav {
+      .contenedor {
+        width: 260px;
+        height: 200px;
+        .overlay {
+          width: 260px;
+          height: 200px;
+        }
+      }
+      .contenedor:hover {
+        .overlay {
+          display: block;
+        }
+      }
     }
   }
-  .gifFav .contenedor:hover .overlay{
-    display: block;
-  }
-}
 }

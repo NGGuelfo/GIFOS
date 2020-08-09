@@ -570,11 +570,11 @@ main .buscador .trending ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .resultadosBusqueda #resultadoBusqueda .contenedor {
@@ -1003,11 +1003,15 @@ footer .copyright {
 }
 
 .favoritos .gifFav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding-bottom: 78px;
 }
 
@@ -1037,14 +1041,13 @@ footer .copyright {
 .favoritos .gifFav .contenedor {
   width: 156px;
   height: 120px;
-  padding-bottom: 20px;
 }
 
 .favoritos .gifFav .contenedor .overlay {
   display: none;
   position: absolute;
   width: 156px;
-  height: 120px;
+  height: 140px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1136,13 +1139,17 @@ footer .copyright {
 }
 
 @media screen and (min-width: 1440px) {
+  .favoritos {
+    padding-left: 156px;
+    padding-right: 156px;
+  }
   .favoritos .gifFav .contenedor {
     width: 260px;
     height: 200px;
   }
   .favoritos .gifFav .contenedor .overlay {
     width: 260px;
-    height: 180px;
+    height: 200px;
   }
   .favoritos .gifFav .contenedor:hover .overlay {
     display: block;
