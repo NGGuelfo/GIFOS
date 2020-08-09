@@ -40,6 +40,7 @@ function buscando() {
                     <h3 class="textoError">Intenta con otra Busqueda</h3>
                 </div>
                 `;
+                vermas.style.display = 'none';
             } else{
             for (let i = 0; i < response.data.length; i++) {
                 resultados(response.data[i]);
@@ -76,8 +77,8 @@ function resultados(params) {
             <div class="overlay">
                         <div class="iconos">
                             <button><i class="far fa-heart"></i></button>
-                            <button><i class="fas fa-download"></i></button>
-                            <button><i class="fas fa-expand-alt"></i></button>
+                            <button onclick="descargar('${params.images.downsized.url}')"><i class="fas fa-download"></i></button>
+                            <button onclick="maximizar('${params.images.downsized.url}','${params.title}','${params.username}')"><i class="fas fa-expand-alt"></i></button>
                         </div>
                         <h4>User: "${params.username}"</h4>
                         <h3>${params.title}</h3>
@@ -160,7 +161,36 @@ function trendActuales() {
 
 }
 
-function favoritos() {
+async function descargar(valor){
+
+    debugger;
+    let blob = await fetch(valor).then(r => r.blob())
+    .catch(err => console.log(err));
+    invokeSaveAsDialog(blob,"archivo.gif");
+    
+}
+
+function maximizar(url,titulo,usuario){
+
+let idModal = document.getElementById("modal");
+modal.style.display = "block";
+idModal.innerHTML = `
+
+<div class="modalContainer">
+           <button type="button" id="btnCerrar"><img src="media/close.svg" alt="cerrar"></button>
+           <img id="maxGif" src="${url}" alt="gif prueba">
+           <div id="maxGifoTitle">
+               <div id="elementos">
+                   <h4 id="usuarioMax">${usuario}</h4>
+                   <h3 id="tituloMax">${titulo}</h3>
+               </div>
+               <div id="maxGifoBotones">
+                <button id="btnFav" type="button" class="fav"><i class="fas fa-heart"></i></button>
+                <button id="btnDload" type="button" class="download"><i class="fas fa-download"></i></button>
+               </div>
+           </div>
+        </div>
 
 
+`;
 }

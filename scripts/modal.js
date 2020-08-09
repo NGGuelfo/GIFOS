@@ -4,9 +4,8 @@ let btnDownload = document.getElementById("btnDload");
 let modal = document.getElementById("modal");
 let gif = document.getElementById("maxGif").src;
 let idGif = document.getElementById("maxGif").alt;
-
 btnCerrar.addEventListener("click", cerrar);
-btnDownload.addEventListener("click", descargar);
+btnDownload.addEventListener("click", descargamodal);
 btnFav.addEventListener("click", favoritos);
 
 function cerrar(){
@@ -14,7 +13,7 @@ function cerrar(){
     modal.style.display = "none";
 }
 
-async function descargar(){
+async function descargamodal(){
 
     let blob = await fetch(gif).then(r => r.blob());
     invokeSaveAsDialog(blob,"archivo.gif");
