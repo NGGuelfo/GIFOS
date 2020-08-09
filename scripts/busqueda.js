@@ -76,7 +76,7 @@ function resultados(params) {
         <div class="contenedor">
             <div class="overlay">
                         <div class="iconos">
-                            <button onclick="fav('${content.data[i].id}')"><i class="far fa-heart"></i></button>
+                            <button onclick="fav('${params.id}')"><i class="far fa-heart"></i></button>
                             <button onclick="descargar('${params.images.downsized.url}')"><i class="fas fa-download"></i></button>
                             <button onclick="maximizar('${params.images.downsized.url}','${params.title}','${params.username}','${params.id}')"><i class="fas fa-expand-alt"></i></button>
                         </div>
