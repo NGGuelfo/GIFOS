@@ -189,7 +189,8 @@ function fav(variable){
     let fav = [];
 
     if (localStorage.getItem("favoritos") == null) {
-        localStorage.setItem("favoritos", JSON.stringify(fav.push(variable)));
+        fav.push(variable);
+        localStorage.setItem("favoritos", JSON.stringify(fav));
     } else {
         fav.push(JSON.parse(localStorage.getItem("favoritos")));
         fav.push(variable);

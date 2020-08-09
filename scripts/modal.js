@@ -24,10 +24,15 @@ function favoritos() {
     let favoritos = [];
 
     if (localStorage.getItem("favoritos") == null) {
-        localStorage.setItem("favoritos", JSON.stringify(favoritos.push(idGif)));
-    } else {
-        favoritos.push(JSON.parse(localStorage.getItem("favoritos")));
         favoritos.push(idGif);
-        localStorage.setItem("favoritos", JSON.stringify(favoritos));
+        const info = JSON.stringify(favoritos);
+
+        localStorage.setItem("favoritos", info);
+    } else {
+        const vuelta = JSON.parse(localStorage.getItem("favoritos"));
+        favoritos.push(vuelta);
+        favoritos.push(idGif);
+        const subida = JSON.stringify(favoritos);
+        localStorage.setItem("favoritos", subida);
     }
 }

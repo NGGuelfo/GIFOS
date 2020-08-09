@@ -152,11 +152,14 @@ async function cargarGifo() {
 
             if(localStorage.getItem("misgifos") == null){
                 arr.push(obj.data.id);
-            localStorage.setItem('misGifos', JSON.stringify(arr));
+                const datos = JSON.stringify(arr);
+            localStorage.setItem('misGifos', datos);
             } else{
-                arr.push(JSON.parse(localStorage.getItem("misgifos")));
+                const vuelta = JSON.parse(localStorage.getItem("misgifos")); 
+                arr.push(vuelta);
                 arr.push(obj.data.id);
-                localStorage.setItem('misGifos', JSON.stringify(arr));
+                const info = JSON.stringify(arr);
+                localStorage.setItem('misGifos', info);
             }
         })
         .catch(err => console.log(err));
