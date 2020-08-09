@@ -185,15 +185,16 @@ imagen.alt = altImagen;
 
 function fav(variable){
 
-
-    let fav = [];
-
-    if (localStorage.getItem("favoritos") == null) {
-        fav.push(variable);
-        localStorage.setItem("favoritos", JSON.stringify(fav));
+    let arr;
+    let arrayFav = localStorage.getItem("favoritos");
+    if(arrayFav == null){
+        arr = [];
+    
     } else {
-        fav.push(JSON.parse(localStorage.getItem("favoritos")));
-        fav.push(variable);
-        localStorage.setItem("favoritos", JSON.stringify(fav));
+
+        arr = JSON.parse(arrayFav);
     }
+    arr.push(variable);
+    arrayFav = JSON.stringify(arr);
+    localStorage.setItem("favoritos", arrayFav);
 }

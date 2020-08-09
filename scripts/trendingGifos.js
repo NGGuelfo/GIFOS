@@ -1,6 +1,6 @@
 let trendingGifos = document.getElementById("tGifos");
 let apikey = 'aABJW22BM12Yf086ZASgx2ZDaOkwCw0e';
-
+let arr = [];
 document.addEventListener("DOMContentLoaded", gifosActuales);
 
 function gifosActuales() {
@@ -30,4 +30,19 @@ function gifosActuales() {
         .catch(err => {
             console.log(err);
         })
+}
+
+function fav(variable){
+
+    let arrayFav = localStorage.getItem("favoritos");
+    if(arrayFav == null){
+        arr = [];
+    
+    } else {
+
+        arr = JSON.parse(arrayFav);
+    }
+    arr.push(variable);
+    arrayFav = JSON.stringify(arr);
+    localStorage.setItem("favoritos", arrayFav);
 }

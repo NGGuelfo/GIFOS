@@ -21,18 +21,16 @@ function favoritos() {
 
     let idGif = document.getElementById("maxGif").alt;
 
-    let favoritos = [];
-
-    if (localStorage.getItem("favoritos") == null) {
-        favoritos.push(idGif);
-        const info = JSON.stringify(favoritos);
-
-        localStorage.setItem("favoritos", info);
+    let arr;
+    let arrayFav = localStorage.getItem("favoritos");
+    if(arrayFav == null){
+        arr = [];
+    
     } else {
-        const vuelta = JSON.parse(localStorage.getItem("favoritos"));
-        favoritos.push(vuelta);
-        favoritos.push(idGif);
-        const subida = JSON.stringify(favoritos);
-        localStorage.setItem("favoritos", subida);
+
+        arr = JSON.parse(arrayFav);
     }
+    arr.push(idGif);
+    arrayFav = JSON.stringify(arr);
+    localStorage.setItem("favoritos", arrayFav);
 }

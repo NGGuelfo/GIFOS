@@ -1136,7 +1136,15 @@ footer .copyright {
 }
 
 @media screen and (min-width: 1440px) {
-  .gifFav .contenedor:hover .overlay {
+  .favoritos .gifFav .contenedor {
+    width: 260px;
+    height: 200px;
+  }
+  .favoritos .gifFav .contenedor .overlay {
+    width: 260px;
+    height: 180px;
+  }
+  .favoritos .gifFav .contenedor:hover .overlay {
     display: block;
   }
 }

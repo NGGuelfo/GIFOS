@@ -124,8 +124,17 @@
   }
 }
 @media screen and (min-width: 1440px){
-
+.favoritos{
+  .gifFav .contenedor{
+    width: 260px;
+    height: 200px;
+    .overlay{
+      width: 260px;
+      height: 180px;
+    }
+  }
   .gifFav .contenedor:hover .overlay{
     display: block;
   }
+}
 }

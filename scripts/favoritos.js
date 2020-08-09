@@ -1,5 +1,5 @@
 let datos = [];
-let contenedor = document.getElementById("gifFav");
+let gifsTraidos = document.getElementById("gifFav");
 let btnMas = document.getElementById("masFav");
 
 document.addEventListener('DOMContentLoaded', cargaDatos);
@@ -8,7 +8,7 @@ function cargaDatos() {
 
     if (localStorage.getItem('favoritos') == null) {
 
-        contenedor.innerHTML = `
+        gifsTraidos.innerHTML = `
 
             <div id="noFavoritos">
                 <img src="media/icon-fav-sin-contenido.svg" alt="imagen-sin-favoritos">
@@ -23,31 +23,40 @@ function cargaDatos() {
 
         datos.push(JSON.parse(localStorage.getItem("favoritos")));
 
-            fetch(`https://api.giphy.com/v1/gifs/?api_key=${apikey}&ids=${datos}`)
+            fetch(`https://api.giphy.com/v1/gifs?api_key=${apikey}&ids=${datos.toString()}`)
             .then(response => response.json())
             .then(obj => {
-                debugger;  
-                contenedor.innerHTML += `
-                
-                <div class="contenedor">
-                    <div class="overlay">
-                                <div class="iconos">
-                                    <button onclick="noFav('${obj.data.id}')"><i class="fas fa-heart"></i></button>
-                                    <button onclick="descargar('${obj.data.downsized.url}')"><i class="fas fa-download"></i></button>
-                                    <button onclick="maximizar('${obj.data.downsized.url}','${obj.data.title}','${obj.data.username}','${obj.data.id}')"><i class="fas fa-expand-alt"></i></button>
-                                </div>
-                                <h4>User: ${obj.data.username}</h4>
-                                <h3>${obj.data.title}</h3>
-                    </div>
-                            <img src="${obj.data.images.downsized.url}" alt="${obj.data.id}">
-                </div>
-                `;
+                debugger;
+                for (let i = 0; i < obj.data.length; i++) {
+                rellenar(obj.data[i]);
+                }
             })
             .catch(err => console.log(err));
     }
 
 }
 
+
+function rellenar(params){
+
+    gifsTraidos.innerHTML += `
+                
+                <div class="contenedor">
+                    <div class="overlay">
+                                <div class="iconos">
+                                    <button onclick="noFav('${params.id}')"><i class="fas fa-heart"></i></button>
+                                    <button onclick="descargar('${params.images.downsized.url}')"><i class="fas fa-download"></i></button>
+                                    <button onclick="maximizar('${params.images.downsized.url}','${params.title}','${params.username}','${params.id}')"><i class="fas fa-expand-alt"></i></button>
+                                </div>
+                                <h4>User: ${params.username}</h4>
+                                <h3>${params.title}</h3>
+                    </div>
+                            <img src="${params.images.downsized.url}" alt="${params.id}">
+                </div>
+                `;
+
+
+}
 function noFav(valor){
 
     localStorage.removeItem('favoritos',valor);
@@ -73,22 +82,4 @@ imagen.src = url;
 tituloMax.innerText = titulo;
 user.innerText = "Usuario: " + usuario;
 imagen.alt = altImagen;
-}
-
-function fav(variable){
-
-
-    let fav = [];
-
-    if (localStorage.getItem("favoritos") == null) {
-        fav.push(variable);
-        const auxiliar = JSON.stringify(fav);
-        localStorage.setItem("favoritos", auxiliar);
-    } else {
-        const vueltaLocal = JSON.parse(localStorage.getItem("favoritos")); 
-        fav.push(vueltaLocal);
-        fav.push(variable);
-        const resubida = JSON.stringify(fav);
-        localStorage.setItem("favoritos", resubida);
-    }
 }
