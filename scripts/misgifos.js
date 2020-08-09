@@ -85,3 +85,20 @@ function fav(variable){
     arrayFav = JSON.stringify(arr);
     localStorage.setItem("favoritos", arrayFav);
 }
+
+function noFav(valor) {
+
+    let auxiliar = [];
+    let arr = localStorage.getItem("misGifos");
+    auxiliar = JSON.parse(arr);
+    let indice = auxiliar.indexOf(valor);
+
+    auxiliar.splice(indice, 1);
+
+    const newgifos = JSON.stringify(auxiliar);
+    if (newgifos == '[]') {
+        localStorage.removeItem("misGifos");
+    } else {
+        localStorage.setItem("misGifos", newgifos);
+    }
+}
