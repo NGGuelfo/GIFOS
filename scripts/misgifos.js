@@ -1,5 +1,6 @@
 let videos = [];
 let container = document.getElementById("mgifContenedor");
+let btnVMas = document.getElementById("misGifosVerMas");
 document.addEventListener('DOMContentLoaded', gifosGrabados);
 
 function gifosGrabados() {
@@ -15,13 +16,13 @@ function gifosGrabados() {
 
 
 `;
-        //btnMas.style.display = 'none';
+        btnVMas.style.display = 'none';
     
     } else {
 
-        datos.push(JSON.parse(localStorage.getItem("misGifos")));
+        videos.push(JSON.parse(localStorage.getItem("misGifos")));
 
-            fetch(`https://api.giphy.com/v1/gifs?api_key=${apikey}&ids=${datos.toString()}`)
+            fetch(`https://api.giphy.com/v1/gifs?api_key=${apikey}&ids=${videos.toString()}`)
             .then(response => response.json())
             .then(obj => {
                 for (let i = 0; i < obj.data.length; i++) {
@@ -37,7 +38,7 @@ function gifosGrabados() {
                                 <h4>User: </h4>
                                 <h3>Titulo</h3>
                     </div>
-                            <img src="media/697b023b-64a5-49a0-8059-27b963453fb1.gif" alt="ejemplo">
+                            <img src="${obj.data[i].images.downsized.url}" alt="ejemplo">
                 </div>
                 `;
                 }
