@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: auto 0;
+  padding: 0;
+}
+
+@import "./diurno/modal";
+@import "./diurno/header";
+@import "./diurno/busqueda";
+@import "./diurno/resultados";
+@import "./diurno/trending";
+@import "./diurno/footer";
+@import "./diurno/favoritos";
+@import "./diurno/misGifos";
+
+@import "./nocturno/modal";
+@import "./nocturno/header";
+@import "./nocturno/busqueda";
+@import "./nocturno/resultados";
+@import "./nocturno/trending";
+@import "./nocturno/footer";
+@import "./nocturno/favoritos";
+@import "./nocturno/misGifos";

@@ -1,14 +1,15 @@
 @import "./variables";
 
 .darkBody{
+  background-color: #37383C;
 main .buscador {
   display: flex;
   flex-direction: column;
   align-content: center;
-
+ 
   h2 {
     @include menu-lista;
-    color: $azul-textos;
+    color: $blanco;
     font-size: 25px;
     line-height: 33px;
     padding-left: 54px;
