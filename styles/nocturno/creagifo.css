@@ -1,0 +1,301 @@
+@media screen and (min-width: 1440px) {
+  .camara-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 15px;
+    padding-left: 156px;
+  }
+  .camara-video .reproductor #luz {
+    width: 98px;
+    height: 160px;
+  }
+  .camara-video .ventana {
+    border: 1px solid #572ee5;
+    width: 688px;
+    height: 390px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .camara-video .ventana .detalle-ventana {
+    position: relative;
+    width: 646px;
+    height: 353px;
+    margin-top: 18px;
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-uno {
+    padding-top: 104px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-uno h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #572ee5;
+    text-align: center;
+    line-height: 35px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-uno h2 span {
+    color: #50e3c2;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-uno p {
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 29px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-dos {
+    display: none;
+    padding-top: 104px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-dos h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #572ee5;
+    text-align: center;
+    line-height: 35px;
+  }
+  .camara-video .ventana .detalle-ventana .pantalla-dos p {
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 29px;
+  }
+  .camara-video .ventana .detalle-ventana .grabacion {
+    position: relative;
+    width: 480px;
+    height: 320px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor {
+    margin-top: 16.5px;
+    width: 480px;
+    height: 320px;
+    position: absolute;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(87, 46, 229, 0.6);
+    display: none;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post {
+    width: 100%;
+    padding-right: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: absolute;
+    margin: 0;
+    display: none;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #572ee5;
+    opacity: 0.5;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button i {
+    width: 100%;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button:hover {
+    opacity: 1;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor .primer-capa {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    display: none;
+    padding-top: 140px;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor .primer-capa p {
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor .segunda-capa {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+    margin: 0;
+    padding-top: 140px;
+  }
+  .camara-video .ventana .detalle-ventana .overlay-video-contenedor .segunda-capa p {
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+  .pasos-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 485px;
+  }
+  .pasos-video .cont-pasos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .pasos-video .cont-pasos p {
+    width: 32px;
+    height: 32px;
+    margin-left: 25px;
+    border: 1px solid #572ee5;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 18px;
+    color: #572ee5;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .pasos-video .cont-pasos p:first-child {
+    margin-left: 0;
+  }
+  .pasos-video #rep-captura {
+    position: absolute;
+    margin-left: 100px;
+    padding-top: 35px;
+  }
+  .pasos-video #nueva-captura {
+    display: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #572ee5;
+    text-align: center;
+  }
+  .pasos-video #nueva-captura:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #5ed7c6;
+            text-decoration-color: #5ed7c6;
+  }
+  .pasos-video #contador {
+    display: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #572ee5;
+    text-align: center;
+    line-height: 22px;
+  }
+  .pasos-video img {
+    padding-left: 336px;
+  }
+  #separador {
+    height: 6.9px;
+    width: 795.9px;
+    margin-left: 325px;
+    background-color: #572ee5;
+    border-radius: 5px;
+  }
+  .botonera {
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .botonera .boton {
+    color: #572ee5;
+    background-color: #ffffff;
+    border: none;
+    border: 1px solid #572ee5;
+    border-radius: 25px;
+    width: 127px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 700;
+  }
+  .botonera .boton:hover {
+    background-color: #572ee5;
+    color: #ffffff;
+  }
+  .botonera #btn-grabar {
+    display: none;
+  }
+  .botonera #btn-finalizar {
+    display: none;
+  }
+  .botonera #btn-subgifo {
+    display: none;
+  }
+}
+/*# sourceMappingURL=creagifo.css.map */
