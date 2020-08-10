@@ -158,10 +158,15 @@
                 height: 54px;
                 width: 54px;
                 border: 1px solid $blanco;
+                background-color: #37383C;
                 border-radius: 50%;
 
                 #masHover {
                   display: none;
+                  width: 16px;
+                }
+                #masNoHover{
+                  width: 16px;
                 }
               }
               #btnCrearGifo:hover {
@@ -173,6 +178,7 @@
                 }
                 #masNoHover {
                   display: none;
+                  width: 16px;
                 }
               }
               a {

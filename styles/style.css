@@ -1648,10 +1648,15 @@ footer .copyright {
     height: 54px;
     width: 54px;
     border: 1px solid #ffffff;
+    background-color: #37383C;
     border-radius: 50%;
   }
   .darkBody header nav .menu ul li #btnCrearGifo #masHover {
     display: none;
+    width: 16px;
+  }
+  .darkBody header nav .menu ul li #btnCrearGifo #masNoHover {
+    width: 16px;
   }
   .darkBody header nav .menu ul li #btnCrearGifo:hover {
     background-color: #ffffff;
@@ -1664,6 +1669,7 @@ footer .copyright {
   }
   .darkBody header nav .menu ul li #btnCrearGifo:hover #masNoHover {
     display: none;
+    width: 16px;
   }
   .darkBody header nav .menu ul li a {
     color: #ffffff;
