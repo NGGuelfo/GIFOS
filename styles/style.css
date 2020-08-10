@@ -1463,11 +1463,12 @@ footer .copyright {
   }
 }
 
-.darkBody body {
-  border-top: 5px solid #572ee5;
+.darkBody {
+  border-top: 5px solid #000000;
+  background-color: #37383C;
 }
 
-.darkBody body header {
+.darkBody header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1483,21 +1484,21 @@ footer .copyright {
           justify-content: space-between;
 }
 
-.darkBody body header .logo #logoMob {
+.darkBody header .logo #logoMob {
   display: block;
   width: 54px;
   height: 49px;
 }
 
-.darkBody body header .logo #logoDesk {
+.darkBody header .logo #logoDesk {
   display: none;
 }
 
-.darkBody body header .menu {
+.darkBody header .menu {
   padding-top: 3px;
 }
 
-.darkBody body header .menu ul {
+.darkBody header .menu ul {
   padding-bottom: 0px;
   margin-top: 34px;
   width: 100%;
@@ -1506,22 +1507,22 @@ footer .copyright {
   right: 0;
   overflow: hidden;
   list-style: none;
-  background: rgba(87, 46, 229, 0.9);
+  background-color: #000000;
   height: 0px;
   -webkit-transition: height 0.5s ease;
   transition: height 0.5s ease;
 }
 
-.darkBody body header .menu ul li {
+.darkBody header .menu ul li {
   padding-left: 16px;
   position: relative;
 }
 
-.darkBody body header .menu ul li #btnCrearGifo {
+.darkBody header .menu ul li #btnCrearGifo {
   display: none;
 }
 
-.darkBody body header .menu ul li a {
+.darkBody header .menu ul li a {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -1533,7 +1534,7 @@ footer .copyright {
   display: block;
 }
 
-.darkBody body header .menu ul li a::after {
+.darkBody header .menu ul li a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1543,17 +1544,17 @@ footer .copyright {
   opacity: 0.5;
 }
 
-.darkBody body header .menu ul li a:hover {
+.darkBody header .menu ul li a:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: #5ed7c6;
           text-decoration-color: #5ed7c6;
 }
 
-.darkBody body header .menu ul li:first-child {
+.darkBody header .menu ul li:first-child {
   padding-top: 16px;
 }
 
-.darkBody body header .menu input {
+.darkBody header .menu input {
   display: block;
   width: 40px;
   height: 32px;
@@ -1562,36 +1563,36 @@ footer .copyright {
   position: absolute;
 }
 
-.darkBody body header .menu input[type="checkbox"]:checked ~ ul {
+.darkBody header .menu input[type="checkbox"]:checked ~ ul {
   height: 90%;
   -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
 }
 
-.darkBody body header .menu input[type="checkbox"]:checked ~ span {
+.darkBody header .menu input[type="checkbox"]:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(2px, 1px);
           transform: rotate(45deg) translate(2px, 1px);
 }
 
-.darkBody body header .menu input:checked ~ span:nth-last-child(3) {
+.darkBody header .menu input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0.2, 0.2);
           transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-.darkBody body header .menu input:checked ~ span:nth-last-child(2) {
+.darkBody header .menu input:checked ~ span:nth-last-child(2) {
   -webkit-transform: rotate(-45deg) translate(-1px);
           transform: rotate(-45deg) translate(-1px);
 }
 
-.darkBody body header .menu span {
+.darkBody header .menu span {
   display: block;
   width: 18px;
   height: 2px;
   margin-bottom: 3px;
   position: relative;
-  background: #000000;
+  background: #ffffff;
   z-index: 1;
   -webkit-transform-origin: 3px 0px;
           transform-origin: 3px 0px;
@@ -1655,7 +1656,7 @@ footer .copyright {
     display: none;
   }
   .darkBody body header nav .menu ul li #btnCrearGifo:hover {
-    background-color: #572ee5;
+    background-color: #ffffff;
   }
   .darkBody body header nav .menu ul li #btnCrearGifo:hover #masHover {
     display: -webkit-box;
@@ -1676,10 +1677,6 @@ footer .copyright {
     -webkit-text-decoration-color: #5ed7c6;
             text-decoration-color: #5ed7c6;
   }
-}
-
-.darkBody {
-  background-color: #37383C;
 }
 
 .darkBody main .buscador {

@@ -1,9 +1,8 @@
 @import "./variables";
 
 .darkBody{
-body {
-  border-top: 5px solid $azul-textos;
-
+  border-top: 5px solid #000000;
+  background-color: #37383C;
   header {
     display: flex;
     flex-direction: row;
@@ -34,7 +33,7 @@ body {
         right: 0;
         overflow: hidden;
         list-style: none;
-        background: $fondo-menu;
+        background-color: #000000;
         height: 0px;
         transition: height 0.5s ease;
 
@@ -104,7 +103,7 @@ body {
         height: 2px;
         margin-bottom: 3px;
         position: relative;
-        background: $negro;
+        background: $blanco;
         z-index: 1;
         transform-origin: 3px 0px;
         transition: transform 0.5s ease, opacity 0.55s ease;
@@ -113,7 +112,7 @@ body {
   }
 }
 @media screen and (min-width: 1440px) {
-  body {
+  .darkBody{
     header {
       margin-left: 156px;
       margin-right: 100px;
@@ -167,7 +166,7 @@ body {
                 }
               }
               #btnCrearGifo:hover {
-                background-color: $azul-textos;
+                background-color: $blanco;
 
                 #masHover {
                   display: flex;

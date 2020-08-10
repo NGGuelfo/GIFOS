@@ -51,8 +51,9 @@ footer {
     margin: 0;
   }
 }
-
+}
 @media screen and (min-width: 1440px) {
+  .darkBody{
   footer {
     display: flex;
     flex-direction: row;
