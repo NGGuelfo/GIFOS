@@ -2748,10 +2748,10 @@ footer .copyright {
 }
 
 .darkBody .mGifos .vermas .boton {
-  color: #572ee5;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #37383C;
   border: none;
-  border: 1px solid #572ee5;
+  border: 1px solid #ffffff;
   border-radius: 25px;
   width: 127px;
   height: 50px;
@@ -2760,6 +2760,11 @@ footer .copyright {
   letter-spacing: 0;
   text-align: center;
   font-weight: 700;
+}
+
+.darkBody .mGifos .vermas .boton:hover {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 @media screen and (min-width: 1440px) {
