@@ -213,7 +213,7 @@ body header .menu input {
 }
 
 body header .menu input[type="checkbox"]:checked ~ ul {
-  height: 90%;
+  height: 1000%;
   -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
 }
@@ -695,6 +695,11 @@ main .buscador .trending ul {
   font-weight: 700;
 }
 
+.resultadosBusqueda .vermas .boton:hover {
+  color: #ffffff;
+  background-color: #572ee5;
+}
+
 @media screen and (min-width: 1440px) {
   .resultadosBusqueda {
     padding-left: 156px;
@@ -1154,6 +1159,11 @@ footer .copyright {
   font-weight: 700;
 }
 
+.favoritos .vermas .boton:hover {
+  color: #ffffff;
+  background-color: #572ee5;
+}
+
 @media screen and (min-width: 1440px) {
   .favoritos {
     padding-left: 156px;
@@ -1578,7 +1588,7 @@ footer .copyright {
 }
 
 .darkBody header .menu input[type="checkbox"]:checked ~ ul {
-  height: 90%;
+  height: 1000%;
   -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
 }
@@ -2077,6 +2087,11 @@ footer .copyright {
   font-weight: 700;
 }
 
+.darkBody .resultadosBusqueda .vermas .boton:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 @media screen and (min-width: 1440px) {
   .darkBody .resultadosBusqueda {
     padding-left: 156px;
@@ -2525,10 +2540,10 @@ footer .copyright {
 }
 
 .darkBody .favoritos .vermas .boton {
-  color: #572ee5;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #37383C;
   border: none;
-  border: 1px solid #572ee5;
+  border: 1px solid #ffffff;
   border-radius: 25px;
   width: 127px;
   height: 50px;
@@ -2537,6 +2552,11 @@ footer .copyright {
   letter-spacing: 0;
   text-align: center;
   font-weight: 700;
+}
+
+.darkBody .favoritos .vermas .boton:hover {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 @media screen and (min-width: 1440px) {

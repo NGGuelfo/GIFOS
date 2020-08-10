@@ -109,10 +109,10 @@
   .vermas {
     padding-bottom: 78px;
     .boton {
-      color: $azul-textos;
-      background-color: $blanco;
+      color: $blanco;
+      background-color: #37383C;
       border: none;
-      border: 1px solid $azul-textos;
+      border: 1px solid $blanco;
       border-radius: 25px;
       width: 127px;
       height: 50px;
@@ -121,6 +121,10 @@
       letter-spacing: 0;
       text-align: center;
       font-weight: 700;
+    }
+    .boton:hover{
+      color: $negro;
+      background-color: $blanco;
     }
   }
 }

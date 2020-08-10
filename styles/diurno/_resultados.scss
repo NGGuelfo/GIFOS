@@ -112,6 +112,10 @@
       text-align: center;
       font-weight: 700;
     }
+    .boton:hover{
+      color: $blanco;
+      background-color: $azul-textos;
+    }
   }
 }
 @media screen and (min-width: 1440px) {
