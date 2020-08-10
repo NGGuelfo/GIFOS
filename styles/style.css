@@ -1603,25 +1603,25 @@ footer .copyright {
 }
 
 @media screen and (min-width: 1440px) {
-  .darkBody body header {
+  .darkBody header {
     margin-left: 156px;
     margin-right: 100px;
   }
-  .darkBody body header .logo #logoDesk {
+  .darkBody header .logo #logoDesk {
     display: block;
     width: 60px;
     height: 60px;
   }
-  .darkBody body header .logo #logoMob {
+  .darkBody header .logo #logoMob {
     display: none;
   }
-  .darkBody body header nav .menu input {
+  .darkBody header nav .menu input {
     display: none;
   }
-  .darkBody body header nav .menu span {
+  .darkBody header nav .menu span {
     display: none;
   }
-  .darkBody body header nav .menu ul {
+  .darkBody header nav .menu ul {
     position: relative;
     top: 0;
     right: 0;
@@ -1629,15 +1629,15 @@ footer .copyright {
     background: unset;
     height: unset;
   }
-  .darkBody body header nav .menu ul li:last-child {
+  .darkBody header nav .menu ul li:last-child {
     padding-left: 58px;
   }
-  .darkBody body header nav .menu ul li {
+  .darkBody header nav .menu ul li {
     padding-top: 0;
     padding-left: 41.5px;
     display: inline-block;
   }
-  .darkBody body header nav .menu ul li #btnCrearGifo {
+  .darkBody header nav .menu ul li #btnCrearGifo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1649,33 +1649,42 @@ footer .copyright {
             align-items: center;
     height: 54px;
     width: 54px;
-    border: 1px solid #572ee5;
+    border: 1px solid #ffffff;
     border-radius: 50%;
   }
-  .darkBody body header nav .menu ul li #btnCrearGifo #masHover {
+  .darkBody header nav .menu ul li #btnCrearGifo #masHover {
     display: none;
   }
-  .darkBody body header nav .menu ul li #btnCrearGifo:hover {
+  .darkBody header nav .menu ul li #btnCrearGifo:hover {
     background-color: #ffffff;
   }
-  .darkBody body header nav .menu ul li #btnCrearGifo:hover #masHover {
+  .darkBody header nav .menu ul li #btnCrearGifo:hover #masHover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 16px;
   }
-  .darkBody body header nav .menu ul li #btnCrearGifo:hover #masNoHover {
+  .darkBody header nav .menu ul li #btnCrearGifo:hover #masNoHover {
     display: none;
   }
-  .darkBody body header nav .menu ul li a {
-    color: #572ee5;
+  .darkBody header nav .menu ul li a {
+    color: #ffffff;
     padding: unset;
     line-height: unset;
   }
-  .darkBody body header nav .menu ul li a:hover {
+  .darkBody header nav .menu ul li a:hover {
     text-decoration: underline;
     -webkit-text-decoration-color: #5ed7c6;
             text-decoration-color: #5ed7c6;
+  }
+  .darkBody header nav .menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 20.5px);
+    width: 41px;
+    border-bottom: 0;
+    opacity: 0.5;
   }
 }
 
@@ -1726,7 +1735,7 @@ footer .copyright {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid #572ee5;
+  border: 1px solid #ffffff;
   width: 334px;
   -ms-flex-item-align: center;
       align-self: center;
@@ -1757,7 +1766,7 @@ footer .copyright {
 
 .darkBody main .buscador .busqueda .contenedor #btnBuscar {
   border: 0;
-  background-color: #ffffff;
+  background-color: #37383C;
 }
 
 .darkBody main .buscador .busqueda .contenedor #btnBuscar #cruz {
@@ -1808,7 +1817,7 @@ footer .copyright {
   text-align: center;
   line-height: 60px;
   font-size: 16px;
-  color: #572ee5;
+  color: #ffffff;
   line-height: 25px;
   padding-top: 31px;
 }
@@ -1831,7 +1840,7 @@ footer .copyright {
   color: #ffffff;
   text-align: center;
   line-height: 60px;
-  color: #572ee5;
+  color: #ffffff;
   font-weight: 500;
   line-height: 25px;
   padding-bottom: 35px;
@@ -1908,7 +1917,7 @@ footer .copyright {
   color: #ffffff;
   text-align: center;
   line-height: 60px;
-  color: #572ee5;
+  color: #ffffff;
   font-size: 25px;
   line-height: 40px;
   padding-left: 54px;
@@ -2016,10 +2025,10 @@ footer .copyright {
 }
 
 .darkBody .resultadosBusqueda .vermas .boton {
-  color: #572ee5;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #37383C;
   border: none;
-  border: 1px solid #572ee5;
+  border: 1px solid #ffffff;
   border-radius: 25px;
   width: 127px;
   height: 50px;
@@ -2049,7 +2058,7 @@ footer .copyright {
 }
 
 .darkBody .trendingGifos {
-  background-color: #f3f5f8;
+  background-color: #222326;
   overflow: hidden;
 }
 
@@ -2060,7 +2069,7 @@ footer .copyright {
   color: #ffffff;
   text-align: center;
   line-height: 60px;
-  color: #572ee5;
+  color: #ffffff;
   font-size: 25px;
   line-height: 33px;
   padding-left: 54px;
@@ -2075,6 +2084,7 @@ footer .copyright {
   font-size: 16px;
   text-align: center;
   line-height: 23px;
+  color: #ffffff;
   padding-left: 110px;
   padding-right: 110px;
 }
@@ -2194,7 +2204,7 @@ footer .copyright {
 }
 
 .darkBody footer {
-  border-bottom: 5px solid #572ee5;
+  border-bottom: 5px solid #000000;
 }
 
 .darkBody footer p {
@@ -2203,6 +2213,7 @@ footer .copyright {
   font-size: 16px;
   text-align: center;
   line-height: 23px;
+  color: #ffffff;
   font-size: 14px;
   letter-spacing: 0;
   line-height: 20px;
@@ -2222,6 +2233,7 @@ footer .copyright {
   font-size: 16px;
   text-align: center;
   line-height: 23px;
+  color: #ffffff;
   font-size: 15px;
   letter-spacing: 0;
   padding-bottom: 0;
@@ -2257,7 +2269,7 @@ footer .copyright {
 }
 
 .darkBody footer .compartir .redes a:hover i {
-  color: #572ee5;
+  color: #ffffff;
 }
 
 .darkBody footer .copyright {
@@ -2349,7 +2361,7 @@ footer .copyright {
   line-height: 60px;
   padding-bottom: 46px;
   font-size: 20px;
-  color: #572ee5;
+  color: #ffffff;
   line-height: 30px;
 }
 
@@ -2552,7 +2564,7 @@ footer .copyright {
   line-height: 60px;
   padding-bottom: 46px;
   font-size: 20px;
-  color: #572ee5;
+  color: #ffffff;
   line-height: 30px;
 }
 
