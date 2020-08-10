@@ -1,3 +1,4 @@
+//Creo las variables
 let textoBuscado = document.getElementById("textoBuscado");
 let opciones = document.getElementById("gifos-sugerencias");
 let btnBuscar = document.getElementById("btnBuscar");
@@ -13,6 +14,7 @@ let offset = 0;
 let trend = document.getElementById("trend");
 let modas = document.getElementById("modas");
 
+//realizo las llamadas a funcion
 document.addEventListener("DOMContentLoaded", trendActuales);
 btnBuscar.addEventListener("click", buscando);
 textoBuscado.addEventListener("keyup", sugerencias);
@@ -20,6 +22,7 @@ opciones.addEventListener("click", sugerido);
 vermas.addEventListener("click", masResultados);
 modas.addEventListener("click", sugerido);
 
+//Llamo a la api para que me traiga los gifs acorde a lo que estoy buscando
 function buscando() {
 
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${textoBuscado.value}&limit=12&offset=${offset}`)
@@ -50,6 +53,7 @@ function buscando() {
         .catch(err => console.log(err));
 }
 
+//traigo 12 gifs nuevos y los muestro en pantalla (mismo input que el de la funcion anterior)
 function buscandoVerMas() {
 
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${textoBuscado.value}&limit=12&offset=${offset}`)
@@ -69,6 +73,7 @@ function buscandoVerMas() {
         .catch(err => console.log(err));
 }
 
+//imprimo los gifs traidos a la pantalla
 function resultados(params) {
 
     result.innerHTML += `
@@ -89,6 +94,7 @@ function resultados(params) {
 
 }
 
+//esta funcion me trae palabras similares a la que estoy escribiendo
 function sugerencias() {
 
     fetch(`https://api.giphy.com/v1/tags/related/${textoBuscado.value}?api_key=${apikey}`)
@@ -110,7 +116,7 @@ function sugerencias() {
         })
         .catch(err => console.log(err));
 }
-
+//esta funcion me permite buscar gifs acorde a alguna de las sugerencias presionadas
 function sugerido(e) {
 
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${e.target.innerText}&limit=12&offset=0`)
@@ -130,12 +136,14 @@ function sugerido(e) {
         .catch(err => console.log(err));
 }
 
+//recibe el click del boton ver mas y luego ejecuta la funcion que me trae los 12 nuevos gifs
 function masResultados() {
 
     offset = offset + 12;
     buscandoVerMas();
 }
 
+//me trae las trends que se muestran debajo del input de busqueda
 function trendActuales() {
 
 
@@ -160,7 +168,7 @@ function trendActuales() {
         });
 
 }
-
+//me permite descargar el gif sobre el que estoy parado
 async function descargar(valor){
 
     debugger;
@@ -169,7 +177,7 @@ async function descargar(valor){
     invokeSaveAsDialog(blob,"archivo.gif");
     
 }
-
+//me amplia el gif seleccionado
 function maximizar(url,titulo,usuario,altImagen){
 
 let imagen = document.getElementById("maxGif");
@@ -182,7 +190,7 @@ tituloMax.innerText = titulo;
 user.innerText = "Usuario: " + usuario;
 imagen.alt = altImagen;
 }
-
+//guarda el gif en favoritos
 function fav(variable){
 
     let arr;

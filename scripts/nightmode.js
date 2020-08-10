@@ -1,3 +1,4 @@
+//Inicializo las variables
 let body = document.getElementById("body");
 let btnDark = document.getElementById("btnDark");
 let local = localStorage.getItem("nightmode");
@@ -12,12 +13,13 @@ let btncreaDos = document.getElementById("masNoHover");
 let lupita = document.getElementById("lupa");
 let cruzBuscador = document.getElementById("cruz");
 
+//llamo a la funcion cuando hago click en el cambio de modo
 btnDark.addEventListener("click", change);
 
 if (local === "activado") {
     nightmode();
 }
-
+//dependiendo el modo actual, cambia de modo de visualizacion
 function change() {
 
     local = localStorage.getItem("nightmode");
@@ -31,7 +33,7 @@ function change() {
     }
 }
 
-
+//visualizacion MODO NOCTURNO
 function nightmode() {
 
     body.classList.add("darkBody");
@@ -78,7 +80,7 @@ function nightmode() {
         }
     }
 }
-
+//visualizacion MODO DIURNO
 function daymode() {
 
     body.classList.remove("darkBody");

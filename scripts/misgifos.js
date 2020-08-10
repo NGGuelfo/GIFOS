@@ -1,8 +1,10 @@
+//inicializo las variables
 let videos = [];
 let container = document.getElementById("mgifContenedor");
 let btnVMas = document.getElementById("misGifosVerMas");
+//llamo a funcion una vez cargada la pagina
 document.addEventListener('DOMContentLoaded', gifosGrabados);
-
+//llamo al local y me traigo todos los gifs que he grabado
 function gifosGrabados() {
 
     if (localStorage.getItem('misGifos') == null) {
@@ -17,21 +19,21 @@ function gifosGrabados() {
 
 `;
         btnVMas.style.display = 'none';
-    
+
     } else {
 
         videos.push(JSON.parse(localStorage.getItem("misGifos")));
 
-            fetch(`https://api.giphy.com/v1/gifs?api_key=${apikey}&ids=${videos.toString()}`)
+        fetch(`https://api.giphy.com/v1/gifs?api_key=${apikey}&ids=${videos.toString()}`)
             .then(response => response.json())
             .then(obj => {
                 for (let i = 0; i < obj.data.length; i++) {
-                container.innerHTML += `
+                    container.innerHTML += `
                 
                 <div class="contenedor">
                     <div class="overlay">
                                 <div class="iconos">
-                                    <button onclick="noFav('${obj.data[i].id}')"><i class="far fa-trash-alt"></i></button>
+                                    <button onclick="noMisGifos('${obj.data[i].id}')"><i class="far fa-trash-alt"></i></button>
                                     <button onclick="descargar('${obj.data[i].images.downsized.url}')"><i class="fas fa-download"></i></button>
                                     <button onclick="maximizar('${obj.data[i].images.downsized.url}','${obj.data[i].title}','${obj.data[i].username}','${obj.data[i].id}')"><i class="fas fa-expand-alt"></i></button>
                                 </div>
@@ -48,36 +50,36 @@ function gifosGrabados() {
 
 }
 
-
-async function descargar(valor){
+//descargo el gif seleccionado
+async function descargar(valor) {
 
     let blob = await fetch(valor).then(r => r.blob())
-    .catch(err => console.log(err));
+        .catch(err => console.log(err));
 
-    invokeSaveAsDialog(blob,"archivo.gif");
-    
+    invokeSaveAsDialog(blob, "archivo.gif");
+
 }
+//amplio el gif seleccionado
+function maximizar(url, titulo, usuario, altImagen) {
 
-function maximizar(url,titulo,usuario,altImagen){
+    let imagen = document.getElementById("maxGif");
+    let tituloMax = document.getElementById("tituloMax");
+    let user = document.getElementById("usuarioMax");
+    modal.style.display = "block";
 
-let imagen = document.getElementById("maxGif");
-let tituloMax = document.getElementById("tituloMax");
-let user = document.getElementById("usuarioMax");
-modal.style.display = "block";
-
-imagen.src = url;
-tituloMax.innerText = titulo;
-user.innerText = "Usuario: " + usuario;
-imagen.alt = altImagen;
+    imagen.src = url;
+    tituloMax.innerText = titulo;
+    user.innerText = "Usuario: " + usuario;
+    imagen.alt = altImagen;
 }
-
-function fav(variable){
+//envio el gif seleccionado a favoritos
+function fav(variable) {
 
     let arr;
     let arrayFav = localStorage.getItem("favoritos");
-    if(arrayFav == null){
+    if (arrayFav == null) {
         arr = [];
-    
+
     } else {
 
         arr = JSON.parse(arrayFav);
@@ -86,8 +88,8 @@ function fav(variable){
     arrayFav = JSON.stringify(arr);
     localStorage.setItem("favoritos", arrayFav);
 }
-
-function noFav(valor) {
+//elimino el gif de misGifos
+function noMisGifos(valor) {
 
     let auxiliar = [];
     let arr = localStorage.getItem("misGifos");

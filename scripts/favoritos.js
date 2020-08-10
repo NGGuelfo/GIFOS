@@ -1,9 +1,12 @@
+//inicializo las variables
 let datos = [];
 let gifsTraidos = document.getElementById("gifFav");
 let btnMas = document.getElementById("masFav");
 
+//llamo a funcion una vez cargada la pagina
 document.addEventListener('DOMContentLoaded', cargaDatos);
 
+//me trae los gifs almacenados en favoritos y si no hay me muestra la imagen correspondiente
 function cargaDatos() {
 
     if (localStorage.getItem('favoritos') == null) {
@@ -35,7 +38,7 @@ function cargaDatos() {
 
 }
 
-
+//imprime en pantalla los gifs que estoy trayendo del localStorage
 function rellenar(params) {
 
     gifsTraidos.innerHTML += `
@@ -56,6 +59,7 @@ function rellenar(params) {
 
 
 }
+//elimina el gif seleccionado de favoritos
 function noFav(valor) {
 
     let auxiliar = [];
@@ -72,7 +76,7 @@ function noFav(valor) {
         localStorage.setItem("favoritos", newFavoritos);
     }
 }
-
+//descarga el gif seleccionado
 async function descargar(valor) {
 
     let blob = await fetch(valor).then(r => r.blob())
@@ -81,7 +85,7 @@ async function descargar(valor) {
     invokeSaveAsDialog(blob, "archivo.gif");
 
 }
-
+//me amplia el gif seleccionado
 function maximizar(url, titulo, usuario, altImagen) {
 
     let imagen = document.getElementById("maxGif");
