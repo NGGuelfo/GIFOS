@@ -1,0 +1,301 @@
+@media screen and (min-width: 1440px) {
+  .darkBody .camara-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 15px;
+    padding-left: 156px;
+  }
+  .darkBody .camara-video .reproductor #luz {
+    width: 98px;
+    height: 160px;
+  }
+  .darkBody .camara-video .ventana {
+    border: 1px solid #FFFFFF;
+    width: 688px;
+    height: 390px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana {
+    position: relative;
+    width: 646px;
+    height: 353px;
+    margin-top: 18px;
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .pantalla-uno {
+    padding-top: 104px;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .pantalla-uno h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 35px;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .pantalla-uno h2 span {
+    color: #50e3c2;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .pantalla-uno p {
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    line-height: 29px;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .pantalla-dos {
+    display: none;
+    padding-top: 104px;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .pantalla-dos h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 35px;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .pantalla-dos p {
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    line-height: 29px;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .grabacion {
+    position: relative;
+    width: 480px;
+    height: 320px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor {
+    margin-top: 16.5px;
+    width: 480px;
+    height: 320px;
+    position: absolute;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(87, 46, 229, 0.6);
+    display: none;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post {
+    width: 100%;
+    padding-right: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: absolute;
+    margin: 0;
+    display: none;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #572ee5;
+    opacity: 0.5;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button i {
+    width: 100%;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor #botones-post button:hover {
+    opacity: 1;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor .primer-capa {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    display: none;
+    padding-top: 140px;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor .primer-capa p {
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor .segunda-capa {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+    margin: 0;
+    padding-top: 140px;
+  }
+  .darkBody .camara-video .ventana .detalle-ventana .overlay-video-contenedor .segunda-capa p {
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+  .darkBody .pasos-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 485px;
+  }
+  .darkBody .pasos-video .cont-pasos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .darkBody .pasos-video .cont-pasos p {
+    width: 32px;
+    height: 32px;
+    margin-left: 25px;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .darkBody .pasos-video .cont-pasos p:first-child {
+    margin-left: 0;
+  }
+  .darkBody .pasos-video #rep-captura {
+    position: absolute;
+    margin-left: 100px;
+    padding-top: 35px;
+  }
+  .darkBody .pasos-video #nueva-captura {
+    display: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .darkBody .pasos-video #nueva-captura:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #5ed7c6;
+            text-decoration-color: #5ed7c6;
+  }
+  .darkBody .pasos-video #contador {
+    display: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 22px;
+  }
+  .darkBody .pasos-video img {
+    padding-left: 336px;
+  }
+  .darkBody #separador {
+    height: 6.9px;
+    width: 795.9px;
+    margin-left: 325px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+  }
+  .darkBody .botonera {
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .darkBody .botonera .boton {
+    color: #FFFFFF;
+    background-color: #37383C;
+    border: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 25px;
+    width: 127px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 700;
+  }
+  .darkBody .botonera .boton:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+  .darkBody .botonera #btn-grabar {
+    display: none;
+  }
+  .darkBody .botonera #btn-finalizar {
+    display: none;
+  }
+  .darkBody .botonera #btn-subgifo {
+    display: none;
+  }
+}
+/*# sourceMappingURL=creagifooscuro.css.map */
