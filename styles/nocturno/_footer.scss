@@ -2,9 +2,10 @@
 
 .darkBody{
 footer {
-  border-bottom: 5px solid $azul-textos;
+  border-bottom: 5px solid $negro;
   p {
     @include texto-negro;
+    color: $blanco;
     font-size: 14px;
     letter-spacing: 0;
     line-height: 20px;
@@ -16,6 +17,7 @@ footer {
     p {
       padding-top: 47px;
       @include texto-negro;
+      color: $blanco;
       font-size: 15px;
       letter-spacing: 0;
       padding-bottom: 0;
@@ -41,7 +43,7 @@ footer {
       }
       a:hover {
         i {
-          color: $azul-textos;
+          color: $blanco;
         }
       }
     }
