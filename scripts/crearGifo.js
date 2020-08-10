@@ -17,6 +17,7 @@ let form = new FormData();
 let cargando = document.getElementById("cargandoGif");
 let gifSubido = document.getElementById("gifCargado");
 let btnDescargar = document.getElementById("botones-post");
+let darkactivo = localStorage.getItem("nightmode");
 let apikey = 'aABJW22BM12Yf086ZASgx2ZDaOkwCw0e';
 
 let bajada = document.getElementById("descargar");
@@ -31,8 +32,14 @@ bajada.addEventListener("click", descargar);
 
 //funcion para activar la camara y el microfono
 async function Inicializar() {
-    pasoUno.style.backgroundColor = "#572ee5";
-    pasoUno.style.color = "#FFFFFF";
+    if(darkactivo === "activado"){
+        pasoUno.style.backgroundColor = "#FFFFFF";
+        pasoUno.style.color = "#000000";
+    }
+    if(darkactivo === null){
+        pasoUno.style.backgroundColor = "#572ee5";
+        pasoUno.style.color = "#FFFFFF";
+    }
     comenzar.style.display = "none";
     mensajeUno.style.display = "none";
     mensajeDos.style.display = "block";
@@ -43,10 +50,18 @@ async function Inicializar() {
         .then(async function (stream) {
 
             mensajeDos.style.display = "none";
+            if(darkactivo === "activado"){
+            pasoDos.style.backgroundColor = "#FFFFFF";
+            pasoDos.style.color = "#000000";
+            pasoUno.style.backgroundColor = "#37383C";
+            pasoUno.style.color = "#FFFFFF";
+            }
+            if(darkactivo === null){
             pasoDos.style.backgroundColor = "#572ee5";
             pasoDos.style.color = "#FFFFFF";
             pasoUno.style.backgroundColor = "#FFFFFF";
             pasoUno.style.color = "#572ee5";
+            }
             grabar.style.display = "block";
 
             recorder = RecordRTC(stream, {
@@ -85,10 +100,18 @@ async function detener() {
     video.pause();
     grabar.style.display = "none";
     finalizar.style.display = "block";
-    pasoTres.style.backgroundColor = "#572ee5";
+    if(darkactivo === "activado"){
+    pasoTres.style.backgroundColor = "#FFFFFF";
+    pasoTres.style.color = "#000000";
+    pasoDos.style.backgroundColor = "#37383C";
+    pasoDos.style.color = "#FFFFFF";
+    }
+    if(darkactivo === null){
+        pasoTres.style.backgroundColor = "#572ee5";
     pasoTres.style.color = "#FFFFFF";
     pasoDos.style.backgroundColor = "#FFFFFF";
     pasoDos.style.color = "#572ee5";
+    }
     subir.style.display = "block";
     recorder.stopRecording(function () {
         let blob = recorder.getBlob();
