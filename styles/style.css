@@ -1355,7 +1355,7 @@ footer .copyright {
   }
 }
 
-.darkBody body .modal {
+.darkBody .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -1364,13 +1364,11 @@ footer .copyright {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: black;
-  /* Fallback color */
-  background-color: #ffffff;
+  background-color: #37383C;
   opacity: 0.9;
 }
 
-.darkBody body .modal .modalContainer {
+.darkBody .modal .modalContainer {
   width: 100%;
   padding-top: 59px;
   display: -webkit-box;
@@ -1385,22 +1383,22 @@ footer .copyright {
           align-items: center;
 }
 
-.darkBody body .modal .modalContainer button {
+.darkBody .modal .modalContainer button {
   margin-right: 34.3px;
-  width: 24px;
+  width: 14px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   border: 0;
-  background-color: #ffffff;
+  background-color: #37383C;
 }
 
-.darkBody body .modal .modalContainer #maxGif {
+.darkBody .modal .modalContainer #maxGif {
   margin-top: 73px;
   width: 318px;
   height: 245px;
 }
 
-.darkBody body .modal .modalContainer #maxGifoTitle {
+.darkBody .modal .modalContainer #maxGifoTitle {
   padding-top: 14px;
   width: 318px;
   display: -webkit-box;
@@ -1415,21 +1413,21 @@ footer .copyright {
           justify-content: space-between;
 }
 
-.darkBody body .modal .modalContainer #maxGifoTitle h4 {
+.darkBody .modal .modalContainer #maxGifoTitle h4 {
   font-family: "Roboto", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 15px;
   font-weight: lighter;
 }
 
-.darkBody body .modal .modalContainer #maxGifoTitle h3 {
+.darkBody .modal .modalContainer #maxGifoTitle h3 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
   font-size: 16px;
 }
 
-.darkBody body .modal .modalContainer #maxGifoTitle #maxGifoBotones button {
+.darkBody .modal .modalContainer #maxGifoTitle #maxGifoBotones button {
   margin: 0;
   width: 36px;
   height: 36px;
@@ -1438,27 +1436,27 @@ footer .copyright {
   opacity: 0.5;
 }
 
-.darkBody body .modal .modalContainer #maxGifoTitle #maxGifoBotones button i {
-  color: #572ee5;
+.darkBody .modal .modalContainer #maxGifoTitle #maxGifoBotones button i {
+  color: #ffffff;
 }
 
-.darkBody body .modal .modalContainer #maxGifoTitle #maxGifoBotones button:hover {
+.darkBody .modal .modalContainer #maxGifoTitle #maxGifoBotones button:hover {
   opacity: 1;
 }
 
 @media screen and (min-width: 1440px) {
-  .darkBody body .modal {
-    background-color: #FFFFFF;
+  .darkBody .modal {
+    background-color: #37383C;
     opacity: 1;
   }
-  .darkBody body .modal .modalContainer button {
+  .darkBody .modal .modalContainer button {
     margin-right: 278px;
   }
-  .darkBody body .modal .modalContainer #maxGif {
+  .darkBody .modal .modalContainer #maxGif {
     width: 695px;
     height: 385px;
   }
-  .darkBody body .modal .modalContainer #maxGifoTitle {
+  .darkBody .modal .modalContainer #maxGifoTitle {
     width: 695px;
   }
 }

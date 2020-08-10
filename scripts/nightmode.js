@@ -4,6 +4,9 @@ let local = localStorage.getItem("nightmode");
 let logoDesk = document.getElementById("logoDesk");
 let logoMob = document.getElementById("logoMob");
 let css = document.getElementById("css");
+let cruzBlanca = document.getElementById("close");
+let camara = document.getElementById("camara");
+let rollo = document.getElementById("rollo");
 
 btnDark.addEventListener("click", change);
 
@@ -17,10 +20,10 @@ function change() {
 
     if (local !== "activado") {
         nightmode();
-        
+
     } else {
         daymode();
-        
+
     }
 }
 
@@ -34,11 +37,29 @@ function nightmode() {
     if (btnDark.innerText == "Modo Nocturno") {
         logoDesk.setAttribute("src", "./media/logo-desktop.svg");
         logoMob.setAttribute("src", "./media/logo-mobile.svg");
-        css.setAttribute('href',"styles/creagifo.css");
+        if(camara !== null){
+            camara.setAttribute("src", "./media/camara.svg");
+            rollo.setAttribute("src", "./media/pelicula.svg");
+        }
+        if (cruzBlanca !== null) {
+            cruzBlanca.setAttribute("src", "./media/button-close.svg");
+        }
+        if (css !== null) {
+            css.setAttribute('href', "styles/creagifo.css");
+        }
     } else {
         logoDesk.setAttribute("src", "./media/logo-desktop-modo-noc.svg");
         logoMob.setAttribute("src", "./media/logo-mobile-modo-noc.svg");
-        css.setAttribute('href',"styles/creagifooscuro.css");
+        if(camara !== null){
+            camara.setAttribute("src", "./media/camara-modo-noc.svg");
+            rollo.setAttribute("src", "./media/pelicula-modo-noc.svg");
+        }
+        if (cruzBlanca !== null) {
+            cruzBlanca.setAttribute('src', "./media/button-close-modo-noc.svg");
+        }
+        if (css !== null) {
+            css.setAttribute('href', "styles/creagifooscuro.css");
+        }
     }
 }
 
@@ -51,10 +72,28 @@ function daymode() {
     if (btnDark.innerText == "Modo Nocturno") {
         logoDesk.setAttribute("src", "./media/logo-desktop.svg");
         logoMob.setAttribute("src", "./media/logo-mobile.svg");
-        css.setAttribute('href',"styles/creagifo.css");
+        if(camara !== null){
+            camara.setAttribute("src", "./media/camara.svg");
+            rollo.setAttribute("src", "./media/pelicula.svg");
+        }
+        if (cruzBlanca !== null) {
+            cruzBlanca.setAttribute("src", "./media/button-close.svg");
+        }
+        if (css !== null) {
+            css.setAttribute('href', "styles/creagifo.css");
+        }
     } else {
         logoDesk.setAttribute("src", "./media/logo-desktop-modo-noc.svg");
         logoMob.setAttribute("src", "./media/logo-mobile-modo-noc.svg");
-        css.setAttribute('href',"styles/creagifooscuro.css");
+        if(camara !== null){
+            camara.setAttribute("src", "./media/camara-modo-noc.svg");
+            rollo.setAttribute("src", "./media/pelicula-modo-noc.svg");
+        }
+        if (cruzBlanca !== null) {
+            cruzBlanca.setAttribute("src", "./media/button-close-modo-noc.svg");
+        }
+        if (css !== null) {
+            css.setAttribute('href', "styles/creagifooscuro.css");
+        }
     }
 }
