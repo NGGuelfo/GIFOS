@@ -43,13 +43,18 @@ main .buscador {
           width: 20px;
         }
         #textoBuscado {
+          background-color: #37383C;
           padding-left: 13px;
           border: 0;
+        }
+        #textoBuscado::placeholder {
+          color: $blanco;
         }
       }
       #btnBuscar {
         border: 0;
         background-color: #37383C;
+        width: 14px;
         #cruz {
           display: none;
         }

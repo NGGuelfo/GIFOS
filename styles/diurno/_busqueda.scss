@@ -44,6 +44,9 @@ main .buscador {
           padding-left: 13px;
           border: 0;
         }
+        #textoBuscado::placeholder {
+          color: #9cafc3;
+        }
       }
       #btnBuscar {
         border: 0;

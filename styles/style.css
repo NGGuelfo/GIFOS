@@ -404,6 +404,22 @@ main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado {
   border: 0;
 }
 
+main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado::-webkit-input-placeholder {
+  color: #9cafc3;
+}
+
+main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado:-ms-input-placeholder {
+  color: #9cafc3;
+}
+
+main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado::-ms-input-placeholder {
+  color: #9cafc3;
+}
+
+main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado::placeholder {
+  color: #9cafc3;
+}
+
 main .buscador .busqueda .contenedor #btnBuscar {
   border: 0;
   background-color: #ffffff;
@@ -1764,13 +1780,31 @@ footer .copyright {
 }
 
 .darkBody main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado {
+  background-color: #37383C;
   padding-left: 13px;
   border: 0;
+}
+
+.darkBody main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.darkBody main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.darkBody main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.darkBody main .buscador .busqueda .contenedor .ingresoDatos #textoBuscado::placeholder {
+  color: #ffffff;
 }
 
 .darkBody main .buscador .busqueda .contenedor #btnBuscar {
   border: 0;
   background-color: #37383C;
+  width: 14px;
 }
 
 .darkBody main .buscador .busqueda .contenedor #btnBuscar #cruz {
