@@ -459,6 +459,7 @@ main .buscador .busqueda ul li a {
   font-size: 16px;
   text-align: left;
   padding-left: 15px;
+  cursor: pointer;
 }
 
 main .buscador .busqueda ul li:last-child {
@@ -500,6 +501,7 @@ main .buscador .trending ul {
   font-weight: 500;
   line-height: 25px;
   padding-bottom: 35px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1440px) {

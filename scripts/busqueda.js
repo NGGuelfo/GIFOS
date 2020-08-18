@@ -122,6 +122,7 @@ function sugerido(e) {
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${e.target.innerText}&limit=12&offset=0`)
         .then(data => data.json())
         .then(response => {
+            result.innerHTML = '';
             textoBuscado.value = e.target.innerText;
             seccionResult.style.display = 'flex';
             tituloResultado.innerText = e.target.innerText;

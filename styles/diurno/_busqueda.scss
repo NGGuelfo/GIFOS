@@ -71,6 +71,7 @@ main .buscador {
         a {
           @include estilo-sugerencias;
           padding-left: 15px;
+          cursor: pointer;
         }
       }
       li:last-child {
@@ -97,6 +98,7 @@ main .buscador {
       font-weight: 500;
       line-height: 25px;
       padding-bottom: 35px;
+      cursor: pointer;
     }
   }
 }
