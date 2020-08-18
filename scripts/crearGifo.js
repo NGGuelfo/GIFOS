@@ -73,7 +73,8 @@ async function Inicializar() {
                 video.play();
             }
 
-        });
+        })
+        .catch(err => alert(err));
 
 }
 

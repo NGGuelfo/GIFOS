@@ -97,6 +97,7 @@ function resultados(params) {
 //esta funcion me trae palabras similares a la que estoy escribiendo
 function sugerencias() {
 
+    if (textoBuscado.value != ''){
     fetch(`https://api.giphy.com/v1/tags/related/${textoBuscado.value}?api_key=${apikey}`)
         .then(data => data.json())
         .then(resp => {
@@ -115,6 +116,7 @@ function sugerencias() {
         `;
         })
         .catch(err => console.log(err));
+    }
 }
 //esta funcion me permite buscar gifs acorde a alguna de las sugerencias presionadas
 function sugerido(e) {
