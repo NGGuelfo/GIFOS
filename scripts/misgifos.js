@@ -84,9 +84,13 @@ function fav(variable) {
 
         arr = JSON.parse(arrayFav);
     }
-    arr.push(variable);
-    arrayFav = JSON.stringify(arr);
-    localStorage.setItem("favoritos", arrayFav);
+    if (arr.indexOf(variable) == -1) {
+        arr.push(variable);
+        arrayFav = JSON.stringify(arr);
+        localStorage.setItem("favoritos", arrayFav);
+    } else {
+        alert("Este gif ya se encuentra en favoritos");
+    }
 }
 //elimino el gif de misGifos
 function noMisGifos(valor) {

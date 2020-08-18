@@ -18,6 +18,7 @@ let modas = document.getElementById("modas");
 document.addEventListener("DOMContentLoaded", trendActuales);
 btnBuscar.addEventListener("click", buscando);
 textoBuscado.addEventListener("keyup", sugerencias);
+textoBuscado.addEventListener("keypress", searchEnter);
 opciones.addEventListener("click", sugerido);
 vermas.addEventListener("click", masResultados);
 modas.addEventListener("click", sugerido);
@@ -53,6 +54,39 @@ function buscando() {
         .catch(err => console.log(err));
 }
 
+function searchEnter(e) {
+
+    if (e.keyCode === 13) {
+
+        fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${textoBuscado.value}&limit=12&offset=${offset}`)
+            .then(data => data.json())
+            .then(response => {
+                result.innerHTML = '';
+                seccionResult.style.display = 'flex';
+                tituloResultado.innerText = textoBuscado.value;
+                opciones.innerHTML = ``;
+                lupaGris.style.display = "none";
+                lupa.style.display = "flex";
+                cruz.style.display = "none";
+                if (response.data == 0) {
+                    result.innerHTML = `
+                
+                <div id="fallaBusqueda">
+                    <img src="media/icon-busqueda-sin-resultado.svg" alt="imagen-error-busqueda">
+                    <h3 class="textoError">Intenta con otra Busqueda</h3>
+                </div>
+                `;
+                    vermas.style.display = 'none';
+                } else {
+                    for (let i = 0; i < response.data.length; i++) {
+                        resultados(response.data[i]);
+                    }
+                }
+            })
+            .catch(err => console.log(err));
+
+    }
+}
 //traigo 12 gifs nuevos y los muestro en pantalla (mismo input que el de la funcion anterior)
 function buscandoVerMas() {
 
@@ -97,15 +131,15 @@ function resultados(params) {
 //esta funcion me trae palabras similares a la que estoy escribiendo
 function sugerencias() {
 
-    if (textoBuscado.value != ''){
-    fetch(`https://api.giphy.com/v1/tags/related/${textoBuscado.value}?api_key=${apikey}`)
-        .then(data => data.json())
-        .then(resp => {
+    if (textoBuscado.value != '') {
+        fetch(`https://api.giphy.com/v1/tags/related/${textoBuscado.value}?api_key=${apikey}`)
+            .then(data => data.json())
+            .then(resp => {
 
-            lupaGris.style.display = "inline-block";
-            lupa.style.display = "none";
-            cruz.style.display = "flex";
-            opciones.innerHTML = `
+                lupaGris.style.display = "inline-block";
+                lupa.style.display = "none";
+                cruz.style.display = "flex";
+                opciones.innerHTML = `
         
         <li><img src="media/icon-search-gris.svg" alt="icon-search-gris"><a class="extra">${resp.data[0].name}</a></li>
         <li><img src="media/icon-search-gris.svg" alt="icon-search-gris"><a class="extra">${resp.data[1].name}</a></li>
@@ -114,8 +148,8 @@ function sugerencias() {
         
         
         `;
-        })
-        .catch(err => console.log(err));
+            })
+            .catch(err => console.log(err));
     }
 }
 //esta funcion me permite buscar gifs acorde a alguna de las sugerencias presionadas
@@ -204,7 +238,13 @@ function fav(variable) {
 
         arr = JSON.parse(arrayFav);
     }
-    arr.push(variable);
-    arrayFav = JSON.stringify(arr);
-    localStorage.setItem("favoritos", arrayFav);
+    if (arr.indexOf(variable) == -1) {
+
+        arr.push(variable);
+        arrayFav = JSON.stringify(arr);
+        localStorage.setItem("favoritos", arrayFav);
+
+    } else {
+        alert("Este gif ya se encuentra en favoritos");
+    }
 }

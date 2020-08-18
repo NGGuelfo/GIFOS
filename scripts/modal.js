@@ -34,7 +34,11 @@ function favoritos() {
 
         arr = JSON.parse(arrayFav);
     }
-    arr.push(idGif);
-    arrayFav = JSON.stringify(arr);
-    localStorage.setItem("favoritos", arrayFav);
+    if (arr.indexOf(idGif) == -1) {
+        arr.push(idGif);
+        arrayFav = JSON.stringify(arr);
+        localStorage.setItem("favoritos", arrayFav);
+    } else {
+        alert("Este gif ya se encuentra en favoritos");
+    }
 }
