@@ -27,9 +27,9 @@ function favoritos() {
 
     let arr;
     let arrayFav = localStorage.getItem("favoritos");
-    if(arrayFav == null){
+    if (arrayFav == null) {
         arr = [];
-    
+
     } else {
 
         arr = JSON.parse(arrayFav);

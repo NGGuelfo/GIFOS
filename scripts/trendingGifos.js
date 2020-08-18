@@ -1,6 +1,6 @@
 //Inicializo las variables
 let trendingGifos = document.getElementById("tGifos");
-let apikey = 'aABJW22BM12Yf086ZASgx2ZDaOkwCw0e';
+const apikey = 'aABJW22BM12Yf086ZASgx2ZDaOkwCw0e';
 let arr = [];
 //llamo a la funcion una vez cargada la pagina
 document.addEventListener("DOMContentLoaded", gifosActuales);
@@ -35,12 +35,12 @@ function gifosActuales() {
         })
 }
 //envio el gif seleccionado a favoritos
-function fav(variable){
+function fav(variable) {
 
     let arrayFav = localStorage.getItem("favoritos");
-    if(arrayFav == null){
+    if (arrayFav == null) {
         arr = [];
-    
+
     } else {
 
         arr = JSON.parse(arrayFav);

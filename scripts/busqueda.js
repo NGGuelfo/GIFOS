@@ -35,7 +35,7 @@ function buscando() {
             lupaGris.style.display = "none";
             lupa.style.display = "flex";
             cruz.style.display = "none";
-            if(response.data == 0){
+            if (response.data == 0) {
                 result.innerHTML = `
                 
                 <div id="fallaBusqueda">
@@ -44,11 +44,11 @@ function buscando() {
                 </div>
                 `;
                 vermas.style.display = 'none';
-            } else{
-            for (let i = 0; i < response.data.length; i++) {
-                resultados(response.data[i]);
+            } else {
+                for (let i = 0; i < response.data.length; i++) {
+                    resultados(response.data[i]);
+                }
             }
-        }
         })
         .catch(err => console.log(err));
 }
@@ -169,35 +169,34 @@ function trendActuales() {
 
 }
 //me permite descargar el gif sobre el que estoy parado
-async function descargar(valor){
+async function descargar(valor) {
 
-    debugger;
     let blob = await fetch(valor).then(r => r.blob())
-    .catch(err => console.log(err));
-    invokeSaveAsDialog(blob,"archivo.gif");
-    
+        .catch(err => console.log(err));
+    invokeSaveAsDialog(blob, "archivo.gif");
+
 }
 //me amplia el gif seleccionado
-function maximizar(url,titulo,usuario,altImagen){
+function maximizar(url, titulo, usuario, altImagen) {
 
-let imagen = document.getElementById("maxGif");
-let tituloMax = document.getElementById("tituloMax");
-let user = document.getElementById("usuarioMax");
-modal.style.display = "block";
+    let imagen = document.getElementById("maxGif");
+    let tituloMax = document.getElementById("tituloMax");
+    let user = document.getElementById("usuarioMax");
+    modal.style.display = "block";
 
-imagen.src = url;
-tituloMax.innerText = titulo;
-user.innerText = "Usuario: " + usuario;
-imagen.alt = altImagen;
+    imagen.src = url;
+    tituloMax.innerText = titulo;
+    user.innerText = "Usuario: " + usuario;
+    imagen.alt = altImagen;
 }
 //guarda el gif en favoritos
-function fav(variable){
+function fav(variable) {
 
     let arr;
     let arrayFav = localStorage.getItem("favoritos");
-    if(arrayFav == null){
+    if (arrayFav == null) {
         arr = [];
-    
+
     } else {
 
         arr = JSON.parse(arrayFav);
